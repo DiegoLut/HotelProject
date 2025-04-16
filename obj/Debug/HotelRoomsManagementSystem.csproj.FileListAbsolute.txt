@@ -1,0 +1,17 @@
+C:\Users\User\Desktop\ADO.Net\Project\HotelRoomsManagementSystem\bin\Debug\HotelRoomsManagementSystem.exe.config
+C:\Users\User\Desktop\ADO.Net\Project\HotelRoomsManagementSystem\bin\Debug\HotelRoomsManagementSystem.exe
+C:\Users\User\Desktop\ADO.Net\Project\HotelRoomsManagementSystem\bin\Debug\HotelRoomsManagementSystem.pdb
+C:\Users\User\Desktop\ADO.Net\Project\HotelRoomsManagementSystem\bin\Debug\FluentValidation.dll
+C:\Users\User\Desktop\ADO.Net\Project\HotelRoomsManagementSystem\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\User\Desktop\ADO.Net\Project\HotelRoomsManagementSystem\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\User\Desktop\ADO.Net\Project\HotelRoomsManagementSystem\bin\Debug\FluentValidation.xml
+C:\Users\User\Desktop\ADO.Net\Project\HotelRoomsManagementSystem\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\User\Desktop\ADO.Net\Project\HotelRoomsManagementSystem\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\User\Desktop\ADO.Net\Project\HotelRoomsManagementSystem\obj\Debug\HotelRoomsManagementSystem.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\ADO.Net\Project\HotelRoomsManagementSystem\obj\Debug\HotelRoomsManagementSystem.Form1.resources
+C:\Users\User\Desktop\ADO.Net\Project\HotelRoomsManagementSystem\obj\Debug\HotelRoomsManagementSystem.Properties.Resources.resources
+C:\Users\User\Desktop\ADO.Net\Project\HotelRoomsManagementSystem\obj\Debug\HotelRoomsManagementSystem.csproj.GenerateResource.cache
+C:\Users\User\Desktop\ADO.Net\Project\HotelRoomsManagementSystem\obj\Debug\HotelRoomsManagementSystem.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\ADO.Net\Project\HotelRoomsManagementSystem\obj\Debug\HotelRoo.6809A724.Up2Date
+C:\Users\User\Desktop\ADO.Net\Project\HotelRoomsManagementSystem\obj\Debug\HotelRoomsManagementSystem.exe
+C:\Users\User\Desktop\ADO.Net\Project\HotelRoomsManagementSystem\obj\Debug\HotelRoomsManagementSystem.pdb
