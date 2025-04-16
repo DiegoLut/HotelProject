@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.OleDb;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 namespace HotelRoomsManagementSystem.Tabs
 {
@@ -26,6 +27,16 @@ namespace HotelRoomsManagementSystem.Tabs
                 DataSet dsAdded = databaseHelper.dataSet.GetChanges(DataRowState.Added);
                 if (dsAdded != null)
                 {
+                    foreach (DataRow row in dsAdded.Tables["Klient"].Rows)
+                    {
+                        string errorMessage;
+                        if (!ValidateClientRow(row, out errorMessage))
+                        {
+                            MessageBox.Show("Błąd walidacji: " + errorMessage, "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+                        }
+                    }
+
                     using (OleDbConnection conn = new OleDbConnection(databaseHelper.connectionString))
                     {
                         conn.Open();
@@ -104,10 +115,70 @@ namespace HotelRoomsManagementSystem.Tabs
                 MessageBox.Show("Błąd zapisu usuniętych rekordów: " + ex.Message, "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private bool ValidateClientRow(DataRow row, out string errorMessage)
+        {
+            errorMessage = string.Empty;
+
+            string imie = row["Imie"]?.ToString().Trim();
+            string nazwisko = row["Nazwisko"]?.ToString().Trim();
+            string email = row["Email"]?.ToString().Trim();
+            string telefon = row["Telefon"]?.ToString().Trim();
+
+            if (!CustomerValidations.ValidateName(imie))
+            {
+                errorMessage = "Imię może zawierać tylko litery i opcjonalne spacje.";
+                return false;
+            }
+
+            if (!CustomerValidations.ValidateName(nazwisko))
+            {
+                errorMessage = "Nazwisko może zawierać tylko litery i opcjonalne spacje.";
+                return false;
+            }
+
+            if (!CustomerValidations.ValidateEmail(email))
+            {
+                errorMessage = "Adres email jest niepoprawny.";
+                return false;
+            }
+
+            if (!CustomerValidations.ValidatePhone(telefon))
+            {
+                errorMessage = "Numer telefonu jest niepoprawny.";
+                return false;
+            }
+            return true;
+        }
     }
     public class CustomerValidations
     {
+        public static bool ValidateName(string name)
+        {
+            if (string.IsNullOrWhiteSpace(name))
+                return false;
 
+            string pattern = @"^[\p{L}]+(?: [\p{L}]+)*$";
+            return Regex.IsMatch(name, pattern);
+        }
+
+        public static bool ValidateEmail(string email)
+        {
+            if (string.IsNullOrWhiteSpace(email))
+                return false;
+
+            string pattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
+            return Regex.IsMatch(email, pattern);
+        }
+
+        public static bool ValidatePhone(string phone)
+        {
+            if (string.IsNullOrWhiteSpace(phone))
+                return false;
+
+            string pattern = @"^\+?\d{9,15}$";
+            return Regex.IsMatch(phone, pattern);
+        }
     }
 }
 
