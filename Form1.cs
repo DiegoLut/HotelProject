@@ -19,6 +19,7 @@ namespace HotelRoomsManagementSystem
         private Services services;
         private Reservations reservations;
         private Customers customers;
+        private Rooms rooms;
 
         public Form1()
         {
@@ -26,14 +27,15 @@ namespace HotelRoomsManagementSystem
             services = new Services();
             reservations = new Reservations();
             customers = new Customers(databaseHelper);
+            rooms = new Rooms(databaseHelper);
             InitializeComponent();
             dataGridView_clients.AutoGenerateColumns = true;
             dataGridView_room_services.AutoGenerateColumns = true;
             dataGridView_reservations.AutoGenerateColumns = true;
             dataGridView_rooms.AutoGenerateColumns = true;
-            dataGridView_reservations.EditingControlShowing += DataGridView_reservations_EditingControlShowing;
-            dataGridView_reservations.DataError += DataGridView_reservations_DataError;
-            ShowDateTimePickerForColumns();
+            //dataGridView_reservations.EditingControlShowing += DataGridView_reservations_EditingControlShowing;
+            //dataGridView_reservations.DataError += DataGridView_reservations_DataError;
+            //ShowDateTimePickerForColumns();
             InitializeBindings();
         }
 
@@ -55,7 +57,7 @@ namespace HotelRoomsManagementSystem
             bindingNavigator_rooms.BindingSource = bindingSourceRooms;
         }
 
-        private void ShowDateTimePickerForColumns()
+/*        private void ShowDateTimePickerForColumns()
         {
             foreach (DataGridViewRow row in dataGridView_reservations.Rows)
             {
@@ -116,7 +118,7 @@ namespace HotelRoomsManagementSystem
                     };
                 }
             }
-        }
+        }*/
 
         private void toolStripBtn_save_clients_Click(object sender, EventArgs e)
         {
@@ -150,7 +152,33 @@ namespace HotelRoomsManagementSystem
             databaseHelper.ReloadData();
         }
 
+        private void toolStripBtn_save_rooms_Click(object sender, EventArgs e)
+        {
+            bindingSourceRooms.EndEdit();
+            this.BindingContext[databaseHelper.dataSet, "Pokoj"].EndCurrentEdit();
 
+            DataSet ds = databaseHelper.dataSet;
+
+            DataSet dsAdded = ds.GetChanges(DataRowState.Added);
+            DataSet dsModified = ds.GetChanges(DataRowState.Modified);
+
+            if (dsAdded != null)
+            {
+                rooms.SaveInsertedRooms();
+            }
+            else if (dsModified != null)
+            {
+                rooms.SaveUpdatedRooms();
+            }
+            else
+            {
+                MessageBox.Show("Brak zmian do zapisania.", "Informacja", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
+            databaseHelper.dataSet.AcceptChanges();
+            databaseHelper.ReloadData();
+
+        }
 
 
         /*
@@ -187,23 +215,16 @@ namespace HotelRoomsManagementSystem
 
 
 
-        private void DataGridView_reservations_DataError(object sender, DataGridViewDataErrorEventArgs e)
-        {
-            if (e.Exception is FormatException)
-            {
-                MessageBox.Show("Niepoprawny format daty w polu: " + dataGridView_reservations.Columns[e.ColumnIndex].HeaderText,
-                                "Błąd formatu",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Error);
-                e.ThrowException = false;
-            }
-        }
-
-
-        private void button_add_Click(object sender, EventArgs e)
-        {
-            
-        }
-
+        /*        private void DataGridView_reservations_DataError(object sender, DataGridViewDataErrorEventArgs e)
+                {
+                    if (e.Exception is FormatException)
+                    {
+                        MessageBox.Show("Niepoprawny format daty w polu: " + dataGridView_reservations.Columns[e.ColumnIndex].HeaderText,
+                                        "Błąd formatu",
+                                        MessageBoxButtons.OK,
+                                        MessageBoxIcon.Error);
+                        e.ThrowException = false;
+                    }
+                }*/
     }
 }

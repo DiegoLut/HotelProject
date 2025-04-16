@@ -265,7 +265,7 @@
             this.toolStripBtn_save_clients.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripBtn_save_clients.Name = "toolStripBtn_save_clients";
             this.toolStripBtn_save_clients.Size = new System.Drawing.Size(29, 24);
-            this.toolStripBtn_save_clients.Text = "toolStripButton1";
+            this.toolStripBtn_save_clients.Text = "Zapisz";
             this.toolStripBtn_save_clients.Click += new System.EventHandler(this.toolStripBtn_save_clients_Click);
             // 
             // dataGridView_clients
@@ -410,7 +410,7 @@
             this.toolStripBtn_save_reservations.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripBtn_save_reservations.Name = "toolStripBtn_save_reservations";
             this.toolStripBtn_save_reservations.Size = new System.Drawing.Size(29, 24);
-            this.toolStripBtn_save_reservations.Text = "toolStripButton2";
+            this.toolStripBtn_save_reservations.Text = "Zapisz";
             // 
             // dataGridView_reservations
             // 
@@ -552,7 +552,7 @@
             this.toolStripBtn_save_rooms_services.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripBtn_save_rooms_services.Name = "toolStripBtn_save_rooms_services";
             this.toolStripBtn_save_rooms_services.Size = new System.Drawing.Size(29, 24);
-            this.toolStripBtn_save_rooms_services.Text = "toolStripButton3";
+            this.toolStripBtn_save_rooms_services.Text = "Zapisz";
             // 
             // dataGridView_room_services
             // 
@@ -694,7 +694,8 @@
             this.toolStripBtn_save_rooms.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripBtn_save_rooms.Name = "toolStripBtn_save_rooms";
             this.toolStripBtn_save_rooms.Size = new System.Drawing.Size(29, 24);
-            this.toolStripBtn_save_rooms.Text = "toolStripButton4";
+            this.toolStripBtn_save_rooms.Text = "Zapisz";
+            this.toolStripBtn_save_rooms.Click += new System.EventHandler(this.toolStripBtn_save_rooms_Click);
             // 
             // dataGridView_rooms
             // 
