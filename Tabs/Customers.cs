@@ -12,102 +12,160 @@ namespace HotelRoomsManagementSystem.Tabs
 {
     public class Customers
     {
-        DatabaseHelper databaseHelper = new DatabaseHelper();
-        public void SaveClientsChanges()
+        private DatabaseHelper databaseHelper;
+
+        public Customers(DatabaseHelper dbHelper)
+        {
+            databaseHelper = dbHelper;
+        }
+
+        public void SaveInsertedClients()
         {
             try
             {
-                using (OleDbConnection conn = new OleDbConnection(databaseHelper.connectionString))
+                DataSet dsAdded = databaseHelper.dataSet.GetChanges(DataRowState.Added);
+                if (dsAdded != null)
                 {
-                    conn.Open();
-
-                    string insert = "INSERT INTO Klient (Imie, Nazwisko, Email, Telefon) VALUES (?, ?, ?, ?)";
-                    var cmd = new OleDbCommand(insert, conn);
-
-                    cmd.Parameters.Add("Imie", OleDbType.VarChar, 50, "Imie");
-                    cmd.Parameters.Add("Nazwisko", OleDbType.VarChar, 50, "Nazwisko");
-                    cmd.Parameters.Add("Email", OleDbType.VarChar, 100, "Email");
-                    cmd.Parameters.Add("Telefon", OleDbType.VarChar, 20, "Telefon");
-
-                    databaseHelper.adapterClients.InsertCommand = cmd;
-
-                    DataSet dsBefore = new DataSet();
-                    databaseHelper.adapterClients.Fill(dsBefore, "Klient");
-
-                    DataRow newRow = dsBefore.Tables["Klient"].NewRow();
-                    newRow["Imie"] = "Anna";
-                    newRow["Nazwisko"] = "Nowak";
-                    newRow["Email"] = "na.nowak@example.com";
-                    newRow["Telefon"] = "123456789";
-
-                    dsBefore.Tables["Klient"].Rows.Add(newRow);
-                    if (dsBefore.HasChanges())
+                    using (OleDbConnection conn = new OleDbConnection(databaseHelper.connectionString))
                     {
-                        DataSet dsChanges = dsBefore.GetChanges();
-                        
-                        databaseHelper.adapterClients.Update(dsChanges, "Klient");
-                        dsBefore.AcceptChanges();
+                        conn.Open();
 
-                        MessageBox.Show("Klient został zapisany do bazy!", "Sukces", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        
+                        var insertCmd = new OleDbCommand("INSERT INTO Klient (Imie, Nazwisko, Email, Telefon) VALUES (?, ?, ?, ?)", conn);
+                        insertCmd.Parameters.Add("Imie", OleDbType.VarChar, 50, "Imie");
+                        insertCmd.Parameters.Add("Nazwisko", OleDbType.VarChar, 50, "Nazwisko");
+                        insertCmd.Parameters.Add("Email", OleDbType.VarChar, 100, "Email");
+                        insertCmd.Parameters.Add("Telefon", OleDbType.VarChar, 20, "Telefon");
+                        databaseHelper.adapterClients.InsertCommand = insertCmd;
 
+                        databaseHelper.adapterClients.Update(dsAdded, "Klient");
+                        conn.Close();
                     }
-                    else
-                    {
-                        MessageBox.Show("Brak zmian do zapisania", "Informacja", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
+                    MessageBox.Show("Nowe rekordy zostały zapisane.", "Sukces", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Błąd zapisu: " + ex.Message, "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Błąd zapisu nowych rekordów: " + ex.Message, "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            /* try
-             {
-                 OleDbConnection conn = new OleDbConnection(databaseHelper.connectionString);
+        }
 
-                 var dataSetBefore = new DataSet();
-                 var dataSetAfter = new DataSet();
+        public void SaveUpdatedClients()
+        {
+            try
+            {
+                DataSet dsModified = databaseHelper.dataSet.GetChanges(DataRowState.Modified);
+                if (dsModified != null)
+                {
+                    using (OleDbConnection conn = new OleDbConnection(databaseHelper.connectionString))
+                    {
+                        conn.Open();
+                        var updateCmd = new OleDbCommand("UPDATE Klient SET Imie = ?, Nazwisko = ?, Email = ?, Telefon = ? WHERE KlientID = ?", conn);
+                        updateCmd.Parameters.Add("Imie", OleDbType.VarChar, 50, "Imie");
+                        updateCmd.Parameters.Add("Nazwisko", OleDbType.VarChar, 50, "Nazwisko");
+                        updateCmd.Parameters.Add("Email", OleDbType.VarChar, 100, "Email");
+                        updateCmd.Parameters.Add("Telefon", OleDbType.VarChar, 20, "Telefon");
+                        updateCmd.Parameters.Add("KlientID", OleDbType.Integer, 0, "KlientID").SourceVersion = DataRowVersion.Original;
+                        databaseHelper.adapterClients.UpdateCommand = updateCmd;
 
-                 string insert = "INSERT INTO Klient (Imie, Nazwisko, Email, Telefon) VALUES (@Imie, @Nazwisko, @Email, @Telefon)";
-                 var cmd = new OleDbCommand(insert, conn);
+                        databaseHelper.adapterClients.Update(dsModified, "Klient");
+                        conn.Close();
+                    }
+                    MessageBox.Show("Zmodyfikowane rekordy zostały zapisane.", "Sukces", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Błąd zapisu zmodyfikowanych rekordów: " + ex.Message, "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
 
+        public void SaveDeletedClients()
+        {
+            try
+            {
+                DataSet dsDeleted = databaseHelper.dataSet.GetChanges(DataRowState.Deleted);
+                if (dsDeleted != null)
+                {
+                    using (OleDbConnection conn = new OleDbConnection(databaseHelper.connectionString))
+                    {
+                        conn.Open();
+                        var deleteCmd = new OleDbCommand("DELETE FROM Klient WHERE KlientID = ?", conn);
+                        deleteCmd.Parameters.Add("KlientID", OleDbType.Integer, 0, "KlientID").SourceVersion = DataRowVersion.Original;
+                        databaseHelper.adapterClients.DeleteCommand = deleteCmd;
 
-                 cmd.Parameters.Add("@Imie", OleDbType.VarChar, 50, "Imie");
-                 cmd.Parameters.Add("@Nazwisko", OleDbType.VarChar, 50, "Nazwisko");
-                 cmd.Parameters.Add("@Email", OleDbType.VarChar, 100, "Email");
-                 cmd.Parameters.Add("@Telefon", OleDbType.VarChar, 20, "Telefon");
-
-                 databaseHelper.adapterClients.InsertCommand = cmd;
-
-                 databaseHelper.adapterClients.Fill(dataSetBefore, "Klient");
-
-
-                 if (dataSetBefore.HasChanges())
-                 {
-                     dataSetAfter = dataSetBefore.GetChanges();
-                     databaseHelper.adapterClients.Update(dataSetAfter, "Klient");
-
-                     MessageBox.Show("Zmiany zostaly zapisane");
-                 }
-                 else
-                 {
-                     MessageBox.Show("Wprowadz zmiany przed zapisem");
-                 }
-
-             } 
-             catch(Exception ex)
-             {
-                 // Handle exception
-                 Console.WriteLine("Blad: " + ex.Message);
-             }   */
+                        databaseHelper.adapterClients.Update(dsDeleted, "Klient");
+                        conn.Close();
+                    }
+                    MessageBox.Show("Usunięte rekordy zostały zapisane.", "Sukces", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Błąd zapisu usuniętych rekordów: " + ex.Message, "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
+
+    /*public void SaveClientsChanges()
+    {
+        try
+        {
+            using (OleDbConnection conn = new OleDbConnection(databaseHelper.connectionString))
+            {
+                conn.Open();
+
+                // Komendy INSERT
+                var insertCmd = new OleDbCommand("INSERT INTO Klient (Imie, Nazwisko, Email, Telefon) VALUES (?, ?, ?, ?)", conn);
+                insertCmd.Parameters.Add("Imie", OleDbType.VarChar, 50, "Imie");
+                insertCmd.Parameters.Add("Nazwisko", OleDbType.VarChar, 50, "Nazwisko");
+                insertCmd.Parameters.Add("Email", OleDbType.VarChar, 100, "Email");
+                insertCmd.Parameters.Add("Telefon", OleDbType.VarChar, 20, "Telefon");
+                databaseHelper.adapterClients.InsertCommand = insertCmd;
+
+                // Komenda UPDATE
+                var updateCmd = new OleDbCommand("UPDATE Klient SET Imie = ?, Nazwisko = ?, Email = ?, Telefon = ? WHERE KlientID = ?", conn);
+                updateCmd.Parameters.Add("Imie", OleDbType.VarChar, 50, "Imie");
+                updateCmd.Parameters.Add("Nazwisko", OleDbType.VarChar, 50, "Nazwisko");
+                updateCmd.Parameters.Add("Email", OleDbType.VarChar, 100, "Email");
+                updateCmd.Parameters.Add("Telefon", OleDbType.VarChar, 20, "Telefon");
+                updateCmd.Parameters.Add("KlientID", OleDbType.Integer, 0, "KlientID").SourceVersion = DataRowVersion.Original;
+                databaseHelper.adapterClients.UpdateCommand = updateCmd;
+
+                // Komenda DELETE
+                var deleteCmd = new OleDbCommand("DELETE FROM Klient WHERE KlientID = ?", conn);
+                deleteCmd.Parameters.Add("KlientID", OleDbType.Integer, 0, "KlientID").SourceVersion = DataRowVersion.Original;
+                databaseHelper.adapterClients.DeleteCommand = deleteCmd;
+
+                DataSet dataSetBefore = databaseHelper.dataSet;
+                if (dataSetBefore.HasChanges())
+                {
+                    Console.WriteLine("Są zmiany do zapisania.");
+
+                    DataSet dataSetAfter = dataSetBefore.GetChanges();
+
+                    databaseHelper.adapterClients.Update(dataSetAfter, "Klient");
+                    dataSetBefore.AcceptChanges();
+                    MessageBox.Show("Zmiany zostały zapisane.", "Sukces", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Brak zmian do zapisania.", "Informacja", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+
+                conn.Close();
+            }
+        }
+        catch (Exception ex)
+        {
+            MessageBox.Show("Błąd zapisu: " + ex.Message, "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+    }
+}*/
 
     public class CustomerValidations
     {
 
     }
-
-
 }
+
+

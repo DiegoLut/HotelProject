@@ -25,7 +25,7 @@ namespace HotelRoomsManagementSystem
             databaseHelper = new DatabaseHelper();
             services = new Services();
             reservations = new Reservations();
-            customers = new Customers();
+            customers = new Customers(databaseHelper);
             InitializeComponent();
             dataGridView_clients.AutoGenerateColumns = true;
             dataGridView_room_services.AutoGenerateColumns = true;
@@ -119,19 +119,33 @@ namespace HotelRoomsManagementSystem
 
         private void toolStripBtn_save_clients_Click(object sender, EventArgs e)
         {
-            try
-            {
-                customers.SaveClientsChanges();
+            bindingSourceClients.EndEdit();
+            this.BindingContext[databaseHelper.dataSet, "Klient"].EndCurrentEdit();
 
-            }catch(Exception ex){
-                MessageBox.Show("Błąd zapisu: " + ex.Message, "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            DataSet ds = databaseHelper.dataSet;
+
+            if (ds.HasChanges())
+            {
+                if (ds.GetChanges(DataRowState.Added) != null)
+                {
+                    customers.SaveInsertedClients();
+                }
+                if (ds.GetChanges(DataRowState.Modified) != null /*&& ds.GetChanges(DataRowState.Added) == null*/)
+                {
+                    customers.SaveUpdatedClients();
+                }
+                if (ds.GetChanges(DataRowState.Deleted) != null)
+                {
+                    customers.SaveDeletedClients();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Brak zmian do zapisania.", "Informacja", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
-        private void bindingNavigatorAddNewItem1_Click(object sender, EventArgs e)
-        {
 
-        }
 
         /*
          *  try

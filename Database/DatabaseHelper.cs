@@ -7,7 +7,7 @@ using System.Data.OleDb;
 namespace HotelRoomsManagementSystem
 {
 
-    class DatabaseHelper
+    public class DatabaseHelper
     {
         public readonly string connectionString = ConfigurationManager.ConnectionStrings["HotelDB"].ConnectionString;
 

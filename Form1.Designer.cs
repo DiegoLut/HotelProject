@@ -183,7 +183,6 @@
             this.bindingNavigatorAddNewItem1.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorAddNewItem1.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorAddNewItem1.Text = "Dodaj nowy";
-            this.bindingNavigatorAddNewItem1.Click += new System.EventHandler(this.bindingNavigatorAddNewItem1_Click);
             // 
             // bindingNavigatorCountItem1
             // 
@@ -284,7 +283,7 @@
             this.dataGridView_clients.Name = "dataGridView_clients";
             this.dataGridView_clients.RowHeadersWidth = 51;
             this.dataGridView_clients.RowTemplate.Height = 24;
-            this.dataGridView_clients.Size = new System.Drawing.Size(1068, 507);
+            this.dataGridView_clients.Size = new System.Drawing.Size(1068, 480);
             this.dataGridView_clients.TabIndex = 1;
             // 
             // tab_reservations
