@@ -39,7 +39,6 @@ namespace HotelRoomsManagementSystem.Tabs
 
                     using (OleDbConnection conn = new OleDbConnection(databaseHelper.connectionString))
                     {
-                        conn.Open();
 
                         var insertCmd = new OleDbCommand("INSERT INTO Klient (Imie, Nazwisko, Email, Telefon) VALUES (?, ?, ?, ?)", conn);
                         insertCmd.Parameters.Add("Imie", OleDbType.VarChar, 50, "Imie");
@@ -49,7 +48,6 @@ namespace HotelRoomsManagementSystem.Tabs
                         databaseHelper.adapterClients.InsertCommand = insertCmd;
 
                         databaseHelper.adapterClients.Update(dsAdded, "Klient");
-                        conn.Close();
                     }
                     MessageBox.Show("Nowe rekordy zostały zapisane.", "Sukces", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
@@ -69,7 +67,6 @@ namespace HotelRoomsManagementSystem.Tabs
                 {
                     using (OleDbConnection conn = new OleDbConnection(databaseHelper.connectionString))
                     {
-                        conn.Open();
                         var updateCmd = new OleDbCommand("UPDATE Klient SET Imie = ?, Nazwisko = ?, Email = ?, Telefon = ? WHERE KlientID = ?", conn);
                         updateCmd.Parameters.Add("Imie", OleDbType.VarChar, 50, "Imie");
                         updateCmd.Parameters.Add("Nazwisko", OleDbType.VarChar, 50, "Nazwisko");
@@ -79,7 +76,6 @@ namespace HotelRoomsManagementSystem.Tabs
                         databaseHelper.adapterClients.UpdateCommand = updateCmd;
 
                         databaseHelper.adapterClients.Update(dsModified, "Klient");
-                        conn.Close();
                     }
                     MessageBox.Show("Zmodyfikowane rekordy zostały zapisane.", "Sukces", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
@@ -99,13 +95,11 @@ namespace HotelRoomsManagementSystem.Tabs
                 {
                     using (OleDbConnection conn = new OleDbConnection(databaseHelper.connectionString))
                     {
-                        conn.Open();
                         var deleteCmd = new OleDbCommand("DELETE FROM Klient WHERE KlientID = ?", conn);
                         deleteCmd.Parameters.Add("KlientID", OleDbType.Integer, 0, "KlientID").SourceVersion = DataRowVersion.Original;
                         databaseHelper.adapterClients.DeleteCommand = deleteCmd;
 
                         databaseHelper.adapterClients.Update(dsDeleted, "Klient");
-                        conn.Close();
                     }
                     MessageBox.Show("Usunięte rekordy zostały zapisane.", "Sukces", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }

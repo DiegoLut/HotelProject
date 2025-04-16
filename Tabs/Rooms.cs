@@ -24,7 +24,6 @@ namespace HotelRoomsManagementSystem.Tabs
                 {
                     using (OleDbConnection conn = new OleDbConnection(databaseHelper.connectionString))
                     {
-                        conn.Open();
                         var insertCmd = new OleDbCommand("INSERT INTO Pokoj (NumerPokoju, TypPokoju, CenaZaNoc, Dostepnosc) VALUES (?, ?, ?, ?)", conn);
                         insertCmd.Parameters.Add("NumerPokoju", OleDbType.VarChar, 10, "NumerPokoju");
                         insertCmd.Parameters.Add("TypPokoju", OleDbType.VarChar, 50, "TypPokoju");
@@ -33,7 +32,6 @@ namespace HotelRoomsManagementSystem.Tabs
 
                         databaseHelper.adapterRooms.InsertCommand = insertCmd;
                         databaseHelper.adapterRooms.Update(dsAdded, "Pokoj");
-                        conn.Close();
                     }
                     MessageBox.Show("Nowe pokoje zostały zapisane.", "Sukces", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
@@ -53,7 +51,6 @@ namespace HotelRoomsManagementSystem.Tabs
                 {
                     using (OleDbConnection conn = new OleDbConnection(databaseHelper.connectionString))
                     {
-                        conn.Open();
                         var updateCmd = new OleDbCommand("UPDATE Pokoj SET NumerPokoju = ?, TypPokoju = ?, CenaZaNoc = ?, Dostepnosc = ? WHERE PokojID = ?", conn);
                         updateCmd.Parameters.Add("NumerPokoju", OleDbType.VarChar, 10, "NumerPokoju");
                         updateCmd.Parameters.Add("TypPokoju", OleDbType.VarChar, 50, "TypPokoju");
@@ -63,7 +60,6 @@ namespace HotelRoomsManagementSystem.Tabs
 
                         databaseHelper.adapterRooms.UpdateCommand = updateCmd;
                         databaseHelper.adapterRooms.Update(dsModified, "Pokoj");
-                        conn.Close();
                     }
                     MessageBox.Show("Zmodyfikowane pokoje zostały zapisane.", "Sukces", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
