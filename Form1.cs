@@ -30,6 +30,7 @@ namespace HotelRoomsManagementSystem
             dataGridView_clients.AutoGenerateColumns = true;
             dataGridView_room_services.AutoGenerateColumns = true;
             dataGridView_reservations.AutoGenerateColumns = true;
+            dataGridView_rooms.AutoGenerateColumns = true;
             dataGridView_reservations.EditingControlShowing += DataGridView_reservations_EditingControlShowing;
             dataGridView_reservations.DataError += DataGridView_reservations_DataError;
             ShowDateTimePickerForColumns();

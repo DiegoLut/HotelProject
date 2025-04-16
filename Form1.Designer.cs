@@ -52,7 +52,6 @@
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingSource_reservations = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
@@ -68,7 +67,6 @@
             this.bindingNavigatorAddNewItem2 = new System.Windows.Forms.ToolStripButton();
             this.bindingSource_room_services = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigatorCountItem2 = new System.Windows.Forms.ToolStripLabel();
-            this.bindingNavigatorDeleteItem2 = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem2 = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem2 = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator6 = new System.Windows.Forms.ToolStripSeparator();
@@ -84,7 +82,6 @@
             this.bindingNavigatorAddNewItem3 = new System.Windows.Forms.ToolStripButton();
             this.bindingSource_rooms = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigatorCountItem3 = new System.Windows.Forms.ToolStripLabel();
-            this.bindingNavigatorDeleteItem3 = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem3 = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem3 = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator9 = new System.Windows.Forms.ToolStripSeparator();
@@ -304,7 +301,7 @@
             this.bindingNavigator_reservations.AddNewItem = this.bindingNavigatorAddNewItem;
             this.bindingNavigator_reservations.BindingSource = this.bindingSource_reservations;
             this.bindingNavigator_reservations.CountItem = this.bindingNavigatorCountItem;
-            this.bindingNavigator_reservations.DeleteItem = this.bindingNavigatorDeleteItem;
+            this.bindingNavigator_reservations.DeleteItem = null;
             this.bindingNavigator_reservations.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.bindingNavigator_reservations.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
@@ -317,7 +314,6 @@
             this.bindingNavigatorMoveLastItem,
             this.bindingNavigatorSeparator2,
             this.bindingNavigatorAddNewItem,
-            this.bindingNavigatorDeleteItem,
             this.toolStripBtn_save_reservations});
             this.bindingNavigator_reservations.Location = new System.Drawing.Point(3, 2);
             this.bindingNavigator_reservations.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
@@ -345,15 +341,6 @@
             this.bindingNavigatorCountItem.Size = new System.Drawing.Size(38, 24);
             this.bindingNavigatorCountItem.Text = "z {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Suma elementów";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(29, 24);
-            this.bindingNavigatorDeleteItem.Text = "Usuń";
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -456,7 +443,7 @@
             this.bindingNavigator_room_services.AddNewItem = this.bindingNavigatorAddNewItem2;
             this.bindingNavigator_room_services.BindingSource = this.bindingSource_room_services;
             this.bindingNavigator_room_services.CountItem = this.bindingNavigatorCountItem2;
-            this.bindingNavigator_room_services.DeleteItem = this.bindingNavigatorDeleteItem2;
+            this.bindingNavigator_room_services.DeleteItem = null;
             this.bindingNavigator_room_services.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.bindingNavigator_room_services.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem2,
@@ -469,7 +456,6 @@
             this.bindingNavigatorMoveLastItem2,
             this.bindingNavigatorSeparator8,
             this.bindingNavigatorAddNewItem2,
-            this.bindingNavigatorDeleteItem2,
             this.toolStripBtn_save_rooms_services});
             this.bindingNavigator_room_services.Location = new System.Drawing.Point(0, 0);
             this.bindingNavigator_room_services.MoveFirstItem = this.bindingNavigatorMoveFirstItem2;
@@ -497,15 +483,6 @@
             this.bindingNavigatorCountItem2.Size = new System.Drawing.Size(38, 24);
             this.bindingNavigatorCountItem2.Text = "z {0}";
             this.bindingNavigatorCountItem2.ToolTipText = "Suma elementów";
-            // 
-            // bindingNavigatorDeleteItem2
-            // 
-            this.bindingNavigatorDeleteItem2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem2.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem2.Image")));
-            this.bindingNavigatorDeleteItem2.Name = "bindingNavigatorDeleteItem2";
-            this.bindingNavigatorDeleteItem2.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem2.Size = new System.Drawing.Size(29, 24);
-            this.bindingNavigatorDeleteItem2.Text = "Usuń";
             // 
             // bindingNavigatorMoveFirstItem2
             // 
@@ -608,7 +585,7 @@
             this.bindingNavigator_rooms.AddNewItem = this.bindingNavigatorAddNewItem3;
             this.bindingNavigator_rooms.BindingSource = this.bindingSource_rooms;
             this.bindingNavigator_rooms.CountItem = this.bindingNavigatorCountItem3;
-            this.bindingNavigator_rooms.DeleteItem = this.bindingNavigatorDeleteItem3;
+            this.bindingNavigator_rooms.DeleteItem = null;
             this.bindingNavigator_rooms.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.bindingNavigator_rooms.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem3,
@@ -621,7 +598,6 @@
             this.bindingNavigatorMoveLastItem3,
             this.bindingNavigatorSeparator11,
             this.bindingNavigatorAddNewItem3,
-            this.bindingNavigatorDeleteItem3,
             this.toolStripBtn_save_rooms});
             this.bindingNavigator_rooms.Location = new System.Drawing.Point(0, 0);
             this.bindingNavigator_rooms.MoveFirstItem = this.bindingNavigatorMoveFirstItem3;
@@ -649,15 +625,6 @@
             this.bindingNavigatorCountItem3.Size = new System.Drawing.Size(38, 24);
             this.bindingNavigatorCountItem3.Text = "z {0}";
             this.bindingNavigatorCountItem3.ToolTipText = "Total number of items";
-            // 
-            // bindingNavigatorDeleteItem3
-            // 
-            this.bindingNavigatorDeleteItem3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem3.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem3.Image")));
-            this.bindingNavigatorDeleteItem3.Name = "bindingNavigatorDeleteItem3";
-            this.bindingNavigatorDeleteItem3.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem3.Size = new System.Drawing.Size(29, 24);
-            this.bindingNavigatorDeleteItem3.Text = "Delete";
             // 
             // bindingNavigatorMoveFirstItem3
             // 
@@ -796,7 +763,6 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
         private System.Windows.Forms.BindingSource bindingSource_reservations;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator;
@@ -822,7 +788,6 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem2;
         private System.Windows.Forms.BindingSource bindingSource_room_services;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem2;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem2;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem2;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem2;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator6;
@@ -839,7 +804,6 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem3;
         private System.Windows.Forms.BindingSource bindingSource_rooms;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem3;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem3;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem3;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem3;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator9;
