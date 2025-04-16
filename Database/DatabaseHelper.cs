@@ -3,6 +3,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Configuration;
 using System.Data.OleDb;
+using System.Windows.Forms;
 
 namespace HotelRoomsManagementSystem
 {
@@ -53,13 +54,23 @@ namespace HotelRoomsManagementSystem
                 // Handle exception
                 Console.WriteLine("Blad: " + ex.Message);
             }
-
-
         }
 
-        
 
-      
-        
+        public void ReloadData()
+        {
+            try
+            {
+                dataSet.Clear();
+                adapterClients.Fill(dataSet, "Klient");
+                adapterReservations.Fill(dataSet, "Rezerwacja");
+                adapterRoomServices.Fill(dataSet, "Usluga");
+                adapterRooms.Fill(dataSet, "Pokoj");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Błąd odświeżania danych: " + ex.Message, "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

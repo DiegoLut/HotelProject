@@ -118,8 +118,6 @@ namespace HotelRoomsManagementSystem
             }
         }
 
-
-
         private void toolStripBtn_save_clients_Click(object sender, EventArgs e)
         {
             bindingSourceClients.EndEdit();
@@ -149,6 +147,7 @@ namespace HotelRoomsManagementSystem
             }
 
             databaseHelper.dataSet.AcceptChanges();
+            databaseHelper.ReloadData();
         }
 
 
