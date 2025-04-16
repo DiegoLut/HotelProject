@@ -3,11 +3,11 @@
   "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\ADO.Net\\Project\\HotelRoomsManagementSystem\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E8EF8C95-B31B-4C48-8543-B93F94852588}|HotelRoomsManagementSystem.csproj|C:\\Users\\User\\Desktop\\ADO.Net\\Project\\HotelRoomsManagementSystem\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E8EF8C95-B31B-4C48-8543-B93F94852588}|HotelRoomsManagementSystem.csproj|c:\\users\\user\\desktop\\ado.net\\project\\hotelroomsmanagementsystem\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E8EF8C95-B31B-4C48-8543-B93F94852588}|HotelRoomsManagementSystem.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E8EF8C95-B31B-4C48-8543-B93F94852588}|HotelRoomsManagementSystem.csproj|c:\\users\\user\\desktop\\ado.net\\project\\hotelroomsmanagementsystem\\tabs\\customers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E8EF8C95-B31B-4C48-8543-B93F94852588}|HotelRoomsManagementSystem.csproj|C:\\Users\\User\\Desktop\\ADO.Net\\Project\\HotelRoomsManagementSystem\\tabs\\customers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E8EF8C95-B31B-4C48-8543-B93F94852588}|HotelRoomsManagementSystem.csproj|solutionrelative:tabs\\customers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -44,7 +44,7 @@
               "RelativeDocumentMoniker": "Form1.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\ADO.Net\\Project\\HotelRoomsManagementSystem\\Form1.cs",
               "RelativeToolTip": "Form1.cs",
-              "ViewState": "AQIAAHUAAAAAAAAAAAAgwIEAAAARAAAA",
+              "ViewState": "AQIAAHcAAAAAAAAAAAAcwJYAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-16T10:16:02.827Z",
               "IsPinned": true,
@@ -83,8 +83,7 @@
               "ToolTip": "C:\\Users\\User\\Desktop\\ADO.Net\\Project\\HotelRoomsManagementSystem\\Form1.cs [Projekt]",
               "RelativeToolTip": "Form1.cs [Projekt]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-16T10:26:27.009Z",
-              "EditorCaption": " [Projekt]"
+              "WhenOpened": "2025-04-16T10:26:27.009Z"
             },
             {
               "$type": "Document",
@@ -94,7 +93,7 @@
               "RelativeDocumentMoniker": "Tabs\\Customers.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\ADO.Net\\Project\\HotelRoomsManagementSystem\\Tabs\\Customers.cs",
               "RelativeToolTip": "Tabs\\Customers.cs",
-              "ViewState": "AQIAAC8AAAAAAAAAAAAYwBoAAAAkAAAA",
+              "ViewState": "AQIAABgAAAAAAAAAAAAwwCgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-16T10:25:36.667Z",
               "EditorCaption": ""
@@ -109,8 +108,7 @@
               "RelativeToolTip": "Properties\\Resources.resx",
               "ViewState": "AQIAAGcAAAAAAAAAAAAswHoAAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
-              "WhenOpened": "2025-04-16T10:14:38.053Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-16T10:14:38.053Z"
             },
             {
               "$type": "Document",
@@ -122,8 +120,7 @@
               "RelativeToolTip": "Database\\DatabaseHelper.cs",
               "ViewState": "AQIAAAgAAAAAAAAAAAAQwBYAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-16T10:08:59.245Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-16T10:08:59.245Z"
             },
             {
               "$type": "Document",
@@ -135,8 +132,7 @@
               "RelativeToolTip": "App.config",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAABTAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2025-04-16T10:07:59.292Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-16T10:07:59.292Z"
             }
           ]
         }

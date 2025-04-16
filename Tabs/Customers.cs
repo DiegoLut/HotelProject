@@ -105,63 +105,6 @@ namespace HotelRoomsManagementSystem.Tabs
             }
         }
     }
-
-    /*public void SaveClientsChanges()
-    {
-        try
-        {
-            using (OleDbConnection conn = new OleDbConnection(databaseHelper.connectionString))
-            {
-                conn.Open();
-
-                // Komendy INSERT
-                var insertCmd = new OleDbCommand("INSERT INTO Klient (Imie, Nazwisko, Email, Telefon) VALUES (?, ?, ?, ?)", conn);
-                insertCmd.Parameters.Add("Imie", OleDbType.VarChar, 50, "Imie");
-                insertCmd.Parameters.Add("Nazwisko", OleDbType.VarChar, 50, "Nazwisko");
-                insertCmd.Parameters.Add("Email", OleDbType.VarChar, 100, "Email");
-                insertCmd.Parameters.Add("Telefon", OleDbType.VarChar, 20, "Telefon");
-                databaseHelper.adapterClients.InsertCommand = insertCmd;
-
-                // Komenda UPDATE
-                var updateCmd = new OleDbCommand("UPDATE Klient SET Imie = ?, Nazwisko = ?, Email = ?, Telefon = ? WHERE KlientID = ?", conn);
-                updateCmd.Parameters.Add("Imie", OleDbType.VarChar, 50, "Imie");
-                updateCmd.Parameters.Add("Nazwisko", OleDbType.VarChar, 50, "Nazwisko");
-                updateCmd.Parameters.Add("Email", OleDbType.VarChar, 100, "Email");
-                updateCmd.Parameters.Add("Telefon", OleDbType.VarChar, 20, "Telefon");
-                updateCmd.Parameters.Add("KlientID", OleDbType.Integer, 0, "KlientID").SourceVersion = DataRowVersion.Original;
-                databaseHelper.adapterClients.UpdateCommand = updateCmd;
-
-                // Komenda DELETE
-                var deleteCmd = new OleDbCommand("DELETE FROM Klient WHERE KlientID = ?", conn);
-                deleteCmd.Parameters.Add("KlientID", OleDbType.Integer, 0, "KlientID").SourceVersion = DataRowVersion.Original;
-                databaseHelper.adapterClients.DeleteCommand = deleteCmd;
-
-                DataSet dataSetBefore = databaseHelper.dataSet;
-                if (dataSetBefore.HasChanges())
-                {
-                    Console.WriteLine("Są zmiany do zapisania.");
-
-                    DataSet dataSetAfter = dataSetBefore.GetChanges();
-
-                    databaseHelper.adapterClients.Update(dataSetAfter, "Klient");
-                    dataSetBefore.AcceptChanges();
-                    MessageBox.Show("Zmiany zostały zapisane.", "Sukces", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else
-                {
-                    MessageBox.Show("Brak zmian do zapisania.", "Informacja", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-
-                conn.Close();
-            }
-        }
-        catch (Exception ex)
-        {
-            MessageBox.Show("Błąd zapisu: " + ex.Message, "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        }
-    }
-}*/
-
     public class CustomerValidations
     {
 

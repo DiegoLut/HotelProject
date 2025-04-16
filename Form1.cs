@@ -117,6 +117,8 @@ namespace HotelRoomsManagementSystem
             }
         }
 
+
+
         private void toolStripBtn_save_clients_Click(object sender, EventArgs e)
         {
             bindingSourceClients.EndEdit();
@@ -124,26 +126,30 @@ namespace HotelRoomsManagementSystem
 
             DataSet ds = databaseHelper.dataSet;
 
-            if (ds.HasChanges())
+            DataSet dsAdded = ds.GetChanges(DataRowState.Added);
+            DataSet dsModified = ds.GetChanges(DataRowState.Modified);
+            DataSet dsDeleted = ds.GetChanges(DataRowState.Deleted);
+
+            if (dsAdded != null)
             {
-                if (ds.GetChanges(DataRowState.Added) != null)
-                {
-                    customers.SaveInsertedClients();
-                }
-                if (ds.GetChanges(DataRowState.Modified) != null /*&& ds.GetChanges(DataRowState.Added) == null*/)
-                {
-                    customers.SaveUpdatedClients();
-                }
-                if (ds.GetChanges(DataRowState.Deleted) != null)
-                {
-                    customers.SaveDeletedClients();
-                }
+                customers.SaveInsertedClients();
+            }
+            else if (dsModified != null)
+            {
+                customers.SaveUpdatedClients();
+            }
+            else if (dsDeleted != null)
+            {
+                customers.SaveDeletedClients();
             }
             else
             {
                 MessageBox.Show("Brak zmian do zapisania.", "Informacja", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+
+            databaseHelper.dataSet.AcceptChanges();
         }
+
 
 
 
