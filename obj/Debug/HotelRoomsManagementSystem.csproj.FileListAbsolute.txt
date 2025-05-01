@@ -15,3 +15,4 @@ C:\Users\User\Desktop\ADO.Net\Project\HotelRoomsManagementSystem\obj\Debug\Hotel
 C:\Users\User\Desktop\ADO.Net\Project\HotelRoomsManagementSystem\obj\Debug\HotelRoo.6809A724.Up2Date
 C:\Users\User\Desktop\ADO.Net\Project\HotelRoomsManagementSystem\obj\Debug\HotelRoomsManagementSystem.exe
 C:\Users\User\Desktop\ADO.Net\Project\HotelRoomsManagementSystem\obj\Debug\HotelRoomsManagementSystem.pdb
+C:\Users\User\Desktop\ADO.Net\Project\HotelRoomsManagementSystem\obj\Debug\HotelRoomsManagementSystem.Menu.resources
