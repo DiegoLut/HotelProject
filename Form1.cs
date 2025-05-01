@@ -41,9 +41,41 @@ namespace HotelRoomsManagementSystem
             InitializeBindings();
         }
 
+       
+
+        private void btn_goBack_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            menuForm.Show(this);
+        }
+
+        private void InitializeBindings()
+        {
+            bindingSourceClients = new BindingSource { DataSource = databaseHelper.dataSet, DataMember = "Klient" };
+            bindingSourceReservations = new BindingSource { DataSource = databaseHelper.dataSet, DataMember = "Rezerwacja" };
+            bindingSourceRoomServices = new BindingSource { DataSource = databaseHelper.dataSet, DataMember = "Usluga" };
+            bindingSourceRooms = new BindingSource { DataSource = databaseHelper.dataSet, DataMember = "Pokoj" };
+
+            dataGridView_clients.DataSource = bindingSourceClients;
+            dataGridView_reservations.DataSource = bindingSourceReservations;
+            dataGridView_room_services.DataSource = bindingSourceRoomServices;
+            dataGridView_rooms.DataSource = bindingSourceRooms;
+
+            bindingNavigator_clients.BindingSource = bindingSourceClients;
+            bindingNavigator_reservations.BindingSource = bindingSourceReservations;
+            bindingNavigator_room_services.BindingSource = bindingSourceRoomServices;
+            bindingNavigator_rooms.BindingSource = bindingSourceRooms;
+
+            dataGridView_reservations.Columns["CenaLaczna"].ReadOnly = true;
+
+        }
+
+
+
         private void toolStripBtn_save_reservations_Click(object sender, EventArgs e)
         {
-            bindingSourceRooms.EndEdit();
+            dataGridView_reservations.EndEdit();
+            bindingSourceReservations.EndEdit();
             this.BindingContext[databaseHelper.dataSet, "Rezerwacja"].EndCurrentEdit();
 
             DataSet ds = databaseHelper.dataSet;
@@ -95,29 +127,6 @@ namespace HotelRoomsManagementSystem
             databaseHelper.ReloadData();
         }
 
-        private void btn_goBack_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            menuForm.Show(this);
-        }
-
-        private void InitializeBindings()
-        {
-            bindingSourceClients = new BindingSource { DataSource = databaseHelper.dataSet, DataMember = "Klient" };
-            bindingSourceReservations = new BindingSource { DataSource = databaseHelper.dataSet, DataMember = "Rezerwacja" };
-            bindingSourceRoomServices = new BindingSource { DataSource = databaseHelper.dataSet, DataMember = "Usluga" };
-            bindingSourceRooms = new BindingSource { DataSource = databaseHelper.dataSet, DataMember = "Pokoj" };
-
-            dataGridView_clients.DataSource = bindingSourceClients;
-            dataGridView_reservations.DataSource = bindingSourceReservations;
-            dataGridView_room_services.DataSource = bindingSourceRoomServices;
-            dataGridView_rooms.DataSource = bindingSourceRooms;
-
-            bindingNavigator_clients.BindingSource = bindingSourceClients;
-            bindingNavigator_reservations.BindingSource = bindingSourceReservations;
-            bindingNavigator_room_services.BindingSource = bindingSourceRoomServices;
-            bindingNavigator_rooms.BindingSource = bindingSourceRooms;
-        }
 
         private void toolStripBtn_save_clients_Click(object sender, EventArgs e)
         {

@@ -33,8 +33,8 @@ namespace HotelRoomsManagementSystem.Tabs
                         insertCmd.Parameters.Add("Opis", OleDbType.VarChar, 50, "Opis");
                         insertCmd.Parameters.Add("Cena", OleDbType.Decimal, 0, "Cena");
 
-                        databaseHelper.adapterRooms.InsertCommand = insertCmd;
-                        databaseHelper.adapterRooms.Update(dsAdded, "Usluga");
+                        databaseHelper.adapterRoomServices.InsertCommand = insertCmd;
+                        databaseHelper.adapterRoomServices.Update(dsAdded, "Usluga");
                     }
                     MessageBox.Show("Nowe Uslugi zostały zapisane.", "Sukces", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
@@ -60,8 +60,8 @@ namespace HotelRoomsManagementSystem.Tabs
                         updateCmd.Parameters.Add("Opis", OleDbType.VarChar, 0, "Opis");
                         updateCmd.Parameters.Add("Cena", OleDbType.Decimal, 0, "Cena");
 
-                        databaseHelper.adapterRooms.UpdateCommand = updateCmd;
-                        databaseHelper.adapterRooms.Update(dsModified, "Usluga");
+                        databaseHelper.adapterRoomServices.UpdateCommand = updateCmd;
+                        databaseHelper.adapterRoomServices.Update(dsModified, "Usluga");
                     }
                     MessageBox.Show("Zmodyfikowane uslugi zostały zapisane.", "Sukces", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }

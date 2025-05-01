@@ -29,10 +29,11 @@ namespace HotelRoomsManagementSystem
         {
             try
             {
-                adapterClients = new OleDbDataAdapter("SELECT * FROM Klient", connectionString);
-                adapterReservations = new OleDbDataAdapter("SELECT * FROM Rezerwacja", connectionString);
-                adapterRoomServices = new OleDbDataAdapter("SELECT * FROM Usluga", connectionString);
-                adapterRooms = new OleDbDataAdapter("SELECT * FROM Pokoj", connectionString);
+                adapterClients = new OleDbDataAdapter("SELECT Imie, Nazwisko, Email, Telefon FROM Klient", connectionString);
+                adapterReservations = new OleDbDataAdapter("SELECT r.NumerPokoju, r.Email, r.DataZameldowania, r.DataWymeldowania, r.Rabat, ru.NazwaUslugi, " +
+                    "ru.CenaLaczna FROM Rezerwacja AS r JOIN RezerwacjaUsluga AS ru ON r.RezerwacjaID = ru.RezerwacjaID", connectionString);
+                adapterRoomServices = new OleDbDataAdapter("SELECT Nazwa, opis, cena FROM Usluga", connectionString);
+                adapterRooms = new OleDbDataAdapter("SELECT NumerPokoju, TypPokoju, CenaZaNoc, Dostepnosc FROM Pokoj", connectionString);
 
 
                 dataSet = new DataSet();
@@ -51,7 +52,6 @@ namespace HotelRoomsManagementSystem
             }
             catch (Exception ex)
             {
-                // Handle exception
                 Console.WriteLine("Blad: " + ex.Message);
             }
         }
