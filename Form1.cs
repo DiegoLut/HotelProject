@@ -24,8 +24,8 @@ namespace HotelRoomsManagementSystem
         public Form1()
         {
             databaseHelper = new DatabaseHelper();
-            services = new Services();
-            reservations = new Reservations();
+            services = new Services(databaseHelper);
+            reservations = new Reservations(databaseHelper);
             customers = new Customers(databaseHelper);
             rooms = new Rooms(databaseHelper);
             InitializeComponent();
@@ -34,6 +34,60 @@ namespace HotelRoomsManagementSystem
             dataGridView_reservations.AutoGenerateColumns = true;
             dataGridView_rooms.AutoGenerateColumns = true;
             InitializeBindings();
+        }
+
+        private void toolStripBtn_save_reservations_Click(object sender, EventArgs e)
+        {
+            bindingSourceRooms.EndEdit();
+            this.BindingContext[databaseHelper.dataSet, "Rezerwacja"].EndCurrentEdit();
+
+            DataSet ds = databaseHelper.dataSet;
+
+            DataSet dsAdded = ds.GetChanges(DataRowState.Added);
+            DataSet dsModified = ds.GetChanges(DataRowState.Modified);
+
+            if (dsAdded != null)
+            {
+                reservations.SaveReservationsChanges();
+            }
+            else if (dsModified != null)
+            {
+                reservations.SaveUpdatedReservations();
+            }
+            else
+            {
+                MessageBox.Show("Brak zmian do zapisania.", "Informacja", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
+            databaseHelper.dataSet.AcceptChanges();
+            databaseHelper.ReloadData();
+        }
+
+        private void toolStripBtn_save_rooms_services_Click(object sender, EventArgs e)
+        {
+            bindingSourceRooms.EndEdit();
+            this.BindingContext[databaseHelper.dataSet, "Usluga"].EndCurrentEdit();
+
+            DataSet ds = databaseHelper.dataSet;
+
+            DataSet dsAdded = ds.GetChanges(DataRowState.Added);
+            DataSet dsModified = ds.GetChanges(DataRowState.Modified);
+
+            if (dsAdded != null)
+            {
+                services.SaveInsertedServices();
+            }
+            else if (dsModified != null)
+            {
+                services.SaveUpdatedServices();
+            }
+            else
+            {
+                MessageBox.Show("Brak zmian do zapisania.", "Informacja", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
+            databaseHelper.dataSet.AcceptChanges();
+            databaseHelper.ReloadData();
         }
 
         private void InitializeBindings()

@@ -28,13 +28,13 @@ namespace HotelRoomsManagementSystem.Tabs
                 {
                     using (OleDbConnection conn = new OleDbConnection(databaseHelper.connectionString))
                     {
-                        var insertCmd = new OleDbCommand("INSERT INTO Uslugi (Nazwa, Opis, Cena) VALUES (?, ?, ?)", conn);
+                        var insertCmd = new OleDbCommand("INSERT INTO Usluga (Nazwa, Opis, Cena) VALUES (?, ?, ?)", conn);
                         insertCmd.Parameters.Add("Nazwa", OleDbType.VarChar, 10, "Nazwa");
                         insertCmd.Parameters.Add("Opis", OleDbType.VarChar, 50, "Opis");
-                        insertCmd.Parameters.Add("Cena", OleDbType.Currency, 0, "Cena");
+                        insertCmd.Parameters.Add("Cena", OleDbType.Decimal, 0, "Cena");
 
                         databaseHelper.adapterRooms.InsertCommand = insertCmd;
-                        databaseHelper.adapterRooms.Update(dsAdded, "Uslugi");
+                        databaseHelper.adapterRooms.Update(dsAdded, "Usluga");
                     }
                     MessageBox.Show("Nowe Uslugi zostały zapisane.", "Sukces", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
@@ -54,22 +54,21 @@ namespace HotelRoomsManagementSystem.Tabs
                 {
                     using (OleDbConnection conn = new OleDbConnection(databaseHelper.connectionString))
                     {
-                        var updateCmd = new OleDbCommand("UPDATE Pokoj SET NumerPokoju = ?, TypPokoju = ?, CenaZaNoc = ?, Dostepnosc = ? WHERE PokojID = ?", conn);
-                        updateCmd.Parameters.Add("NumerPokoju", OleDbType.VarChar, 10, "NumerPokoju");
-                        updateCmd.Parameters.Add("TypPokoju", OleDbType.VarChar, 50, "TypPokoju");
-                        updateCmd.Parameters.Add("CenaZaNoc", OleDbType.Currency, 0, "CenaZaNoc");
-                        updateCmd.Parameters.Add("Dostepnosc", OleDbType.Boolean, 0, "Dostepnosc");
-                        updateCmd.Parameters.Add("PokojID", OleDbType.Integer, 0, "PokojID").SourceVersion = DataRowVersion.Original;
+                        var updateCmd = new OleDbCommand("UPDATE Uslugi SET Nazwa = ?, Opis = ?, Cena = ? WHERE UslugaID = ?", conn);
+                        updateCmd.Parameters.Add("UslugaID", OleDbType.Integer, 10, "UslugaID");
+                        updateCmd.Parameters.Add("Nazwa", OleDbType.VarChar, 50, "Nazwa");
+                        updateCmd.Parameters.Add("Opis", OleDbType.VarChar, 0, "Opis");
+                        updateCmd.Parameters.Add("Cena", OleDbType.Decimal, 0, "Cena");
 
                         databaseHelper.adapterRooms.UpdateCommand = updateCmd;
-                        databaseHelper.adapterRooms.Update(dsModified, "Pokoj");
+                        databaseHelper.adapterRooms.Update(dsModified, "Usluga");
                     }
-                    MessageBox.Show("Zmodyfikowane Uslugi zostały zapisane.", "Sukces", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Zmodyfikowane uslugi zostały zapisane.", "Sukces", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Błąd zapisu zmian pokoi: " + ex.Message, "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Błąd zapisu zmian uslugi: " + ex.Message, "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

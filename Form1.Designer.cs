@@ -184,7 +184,7 @@
             // bindingNavigatorCountItem1
             // 
             this.bindingNavigatorCountItem1.Name = "bindingNavigatorCountItem1";
-            this.bindingNavigatorCountItem1.Size = new System.Drawing.Size(38, 24);
+            this.bindingNavigatorCountItem1.Size = new System.Drawing.Size(38, 28);
             this.bindingNavigatorCountItem1.Text = "z {0}";
             this.bindingNavigatorCountItem1.ToolTipText = "Suma elementów";
             // 
@@ -194,7 +194,7 @@
             this.bindingNavigatorDeleteItem1.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem1.Image")));
             this.bindingNavigatorDeleteItem1.Name = "bindingNavigatorDeleteItem1";
             this.bindingNavigatorDeleteItem1.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem1.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorDeleteItem1.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorDeleteItem1.Text = "Usuń";
             // 
             // bindingNavigatorMoveFirstItem1
@@ -203,7 +203,7 @@
             this.bindingNavigatorMoveFirstItem1.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem1.Image")));
             this.bindingNavigatorMoveFirstItem1.Name = "bindingNavigatorMoveFirstItem1";
             this.bindingNavigatorMoveFirstItem1.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem1.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorMoveFirstItem1.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorMoveFirstItem1.Text = "Przenieś pierwszy";
             // 
             // bindingNavigatorMovePreviousItem1
@@ -212,13 +212,13 @@
             this.bindingNavigatorMovePreviousItem1.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem1.Image")));
             this.bindingNavigatorMovePreviousItem1.Name = "bindingNavigatorMovePreviousItem1";
             this.bindingNavigatorMovePreviousItem1.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem1.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorMovePreviousItem1.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorMovePreviousItem1.Text = "Przenieś poprzedni";
             // 
             // bindingNavigatorSeparator3
             // 
             this.bindingNavigatorSeparator3.Name = "bindingNavigatorSeparator3";
-            this.bindingNavigatorSeparator3.Size = new System.Drawing.Size(6, 27);
+            this.bindingNavigatorSeparator3.Size = new System.Drawing.Size(6, 31);
             // 
             // bindingNavigatorPositionItem1
             // 
@@ -233,7 +233,7 @@
             // bindingNavigatorSeparator4
             // 
             this.bindingNavigatorSeparator4.Name = "bindingNavigatorSeparator4";
-            this.bindingNavigatorSeparator4.Size = new System.Drawing.Size(6, 27);
+            this.bindingNavigatorSeparator4.Size = new System.Drawing.Size(6, 31);
             // 
             // bindingNavigatorMoveNextItem1
             // 
@@ -241,7 +241,7 @@
             this.bindingNavigatorMoveNextItem1.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem1.Image")));
             this.bindingNavigatorMoveNextItem1.Name = "bindingNavigatorMoveNextItem1";
             this.bindingNavigatorMoveNextItem1.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem1.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorMoveNextItem1.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorMoveNextItem1.Text = "Przenieś następny";
             // 
             // bindingNavigatorMoveLastItem1
@@ -250,13 +250,13 @@
             this.bindingNavigatorMoveLastItem1.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem1.Image")));
             this.bindingNavigatorMoveLastItem1.Name = "bindingNavigatorMoveLastItem1";
             this.bindingNavigatorMoveLastItem1.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem1.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorMoveLastItem1.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorMoveLastItem1.Text = "Przenieś ostatni";
             // 
             // bindingNavigatorSeparator5
             // 
             this.bindingNavigatorSeparator5.Name = "bindingNavigatorSeparator5";
-            this.bindingNavigatorSeparator5.Size = new System.Drawing.Size(6, 27);
+            this.bindingNavigatorSeparator5.Size = new System.Drawing.Size(6, 31);
             // 
             // toolStripBtn_save_clients
             // 
@@ -264,7 +264,7 @@
             this.toolStripBtn_save_clients.Image = global::HotelRoomsManagementSystem.Properties.Resources.save;
             this.toolStripBtn_save_clients.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripBtn_save_clients.Name = "toolStripBtn_save_clients";
-            this.toolStripBtn_save_clients.Size = new System.Drawing.Size(29, 24);
+            this.toolStripBtn_save_clients.Size = new System.Drawing.Size(29, 28);
             this.toolStripBtn_save_clients.Text = "Zapisz";
             this.toolStripBtn_save_clients.Click += new System.EventHandler(this.toolStripBtn_save_clients_Click);
             // 
@@ -411,6 +411,7 @@
             this.toolStripBtn_save_reservations.Name = "toolStripBtn_save_reservations";
             this.toolStripBtn_save_reservations.Size = new System.Drawing.Size(29, 24);
             this.toolStripBtn_save_reservations.Text = "Zapisz";
+            this.toolStripBtn_save_reservations.Click += new System.EventHandler(this.toolStripBtn_save_reservations_Click);
             // 
             // dataGridView_reservations
             // 
@@ -553,6 +554,7 @@
             this.toolStripBtn_save_rooms_services.Name = "toolStripBtn_save_rooms_services";
             this.toolStripBtn_save_rooms_services.Size = new System.Drawing.Size(29, 24);
             this.toolStripBtn_save_rooms_services.Text = "Zapisz";
+            this.toolStripBtn_save_rooms_services.Click += new System.EventHandler(this.toolStripBtn_save_rooms_services_Click);
             // 
             // dataGridView_room_services
             // 
