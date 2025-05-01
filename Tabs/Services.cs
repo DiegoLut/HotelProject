@@ -6,34 +6,70 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace HotelRoomsManagementSystem.Tabs
 {
     public class Services
     {
-        DatabaseHelper databaseHelper = new DatabaseHelper();
+        private DatabaseHelper databaseHelper;
 
-        public void SaveRoomServicesChanges()
+        public Services(DatabaseHelper dbHelper)
+        {
+            databaseHelper = dbHelper;
+        }
+
+        public void SaveInsertedServices()
         {
             try
             {
-                using (SqlConnection conn = new SqlConnection(databaseHelper.connectionString))
+                DataSet dsAdded = databaseHelper.dataSet.GetChanges(DataRowState.Added);
+                if (dsAdded != null)
                 {
-              //      databaseHelper.adapterRoomServices.InsertCommand = new SqlCommand(
-              //          @"INSERT INTO Usluga (Nazwa, Opis, Cena) 
-              //VALUES (@Nazwa, @Opis, @Cena)", conn);
-              //      databaseHelper.adapterRoomServices.InsertCommand.Parameters.Add("@Nazwa", SqlDbType.NVarChar, 100, "Nazwa");
-              //      databaseHelper.adapterRoomServices.InsertCommand.Parameters.Add("@Opis", SqlDbType.NVarChar, 255, "Opis");
-              //      databaseHelper.adapterRoomServices.InsertCommand.Parameters.Add("@Cena", SqlDbType.Decimal, 0, "Cena");
+                    using (OleDbConnection conn = new OleDbConnection(databaseHelper.connectionString))
+                    {
+                        var insertCmd = new OleDbCommand("INSERT INTO Uslugi (Nazwa, Opis, Cena) VALUES (?, ?, ?)", conn);
+                        insertCmd.Parameters.Add("Nazwa", OleDbType.VarChar, 10, "Nazwa");
+                        insertCmd.Parameters.Add("Opis", OleDbType.VarChar, 50, "Opis");
+                        insertCmd.Parameters.Add("Cena", OleDbType.Currency, 0, "Cena");
 
-
-                    //databaseHelper.adapterRoomServices.Update(databaseHelper.dataSet, "Usluga");
+                        databaseHelper.adapterRooms.InsertCommand = insertCmd;
+                        databaseHelper.adapterRooms.Update(dsAdded, "Uslugi");
+                    }
+                    MessageBox.Show("Nowe Uslugi zostały zapisane.", "Sukces", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             catch (Exception ex)
             {
-                // Handle exception
-                Console.WriteLine("Blad: " + ex.Message);
+                MessageBox.Show("Błąd zapisu Uslugi: " + ex.Message, "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public void SaveUpdatedServices()
+        {
+            try
+            {
+                DataSet dsModified = databaseHelper.dataSet.GetChanges(DataRowState.Modified);
+                if (dsModified != null)
+                {
+                    using (OleDbConnection conn = new OleDbConnection(databaseHelper.connectionString))
+                    {
+                        var updateCmd = new OleDbCommand("UPDATE Pokoj SET NumerPokoju = ?, TypPokoju = ?, CenaZaNoc = ?, Dostepnosc = ? WHERE PokojID = ?", conn);
+                        updateCmd.Parameters.Add("NumerPokoju", OleDbType.VarChar, 10, "NumerPokoju");
+                        updateCmd.Parameters.Add("TypPokoju", OleDbType.VarChar, 50, "TypPokoju");
+                        updateCmd.Parameters.Add("CenaZaNoc", OleDbType.Currency, 0, "CenaZaNoc");
+                        updateCmd.Parameters.Add("Dostepnosc", OleDbType.Boolean, 0, "Dostepnosc");
+                        updateCmd.Parameters.Add("PokojID", OleDbType.Integer, 0, "PokojID").SourceVersion = DataRowVersion.Original;
+
+                        databaseHelper.adapterRooms.UpdateCommand = updateCmd;
+                        databaseHelper.adapterRooms.Update(dsModified, "Pokoj");
+                    }
+                    MessageBox.Show("Zmodyfikowane Uslugi zostały zapisane.", "Sukces", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Błąd zapisu zmian pokoi: " + ex.Message, "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
