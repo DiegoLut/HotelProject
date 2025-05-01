@@ -62,7 +62,7 @@
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripBtn_save_reservations = new System.Windows.Forms.ToolStripButton();
             this.dataGridView_reservations = new System.Windows.Forms.DataGridView();
-            this.tab_uslugi = new System.Windows.Forms.TabPage();
+            this.tab_roomServices = new System.Windows.Forms.TabPage();
             this.bindingNavigator_room_services = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem2 = new System.Windows.Forms.ToolStripButton();
             this.bindingSource_room_services = new System.Windows.Forms.BindingSource(this.components);
@@ -92,6 +92,7 @@
             this.bindingNavigatorSeparator11 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripBtn_save_rooms = new System.Windows.Forms.ToolStripButton();
             this.dataGridView_rooms = new System.Windows.Forms.DataGridView();
+            this.btn_goBack = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tab_clients.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator_clients)).BeginInit();
@@ -103,7 +104,7 @@
             this.bindingNavigator_reservations.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource_reservations)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_reservations)).BeginInit();
-            this.tab_uslugi.SuspendLayout();
+            this.tab_roomServices.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator_room_services)).BeginInit();
             this.bindingNavigator_room_services.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource_room_services)).BeginInit();
@@ -119,7 +120,7 @@
             // 
             this.tabControl1.Controls.Add(this.tab_clients);
             this.tabControl1.Controls.Add(this.tab_reservations);
-            this.tabControl1.Controls.Add(this.tab_uslugi);
+            this.tabControl1.Controls.Add(this.tab_roomServices);
             this.tabControl1.Controls.Add(this.tab_rooms);
             this.tabControl1.Location = new System.Drawing.Point(0, -4);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -184,7 +185,7 @@
             // bindingNavigatorCountItem1
             // 
             this.bindingNavigatorCountItem1.Name = "bindingNavigatorCountItem1";
-            this.bindingNavigatorCountItem1.Size = new System.Drawing.Size(38, 28);
+            this.bindingNavigatorCountItem1.Size = new System.Drawing.Size(38, 24);
             this.bindingNavigatorCountItem1.Text = "z {0}";
             this.bindingNavigatorCountItem1.ToolTipText = "Suma elementów";
             // 
@@ -194,7 +195,7 @@
             this.bindingNavigatorDeleteItem1.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem1.Image")));
             this.bindingNavigatorDeleteItem1.Name = "bindingNavigatorDeleteItem1";
             this.bindingNavigatorDeleteItem1.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem1.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorDeleteItem1.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorDeleteItem1.Text = "Usuń";
             // 
             // bindingNavigatorMoveFirstItem1
@@ -203,7 +204,7 @@
             this.bindingNavigatorMoveFirstItem1.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem1.Image")));
             this.bindingNavigatorMoveFirstItem1.Name = "bindingNavigatorMoveFirstItem1";
             this.bindingNavigatorMoveFirstItem1.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem1.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorMoveFirstItem1.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorMoveFirstItem1.Text = "Przenieś pierwszy";
             // 
             // bindingNavigatorMovePreviousItem1
@@ -212,13 +213,13 @@
             this.bindingNavigatorMovePreviousItem1.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem1.Image")));
             this.bindingNavigatorMovePreviousItem1.Name = "bindingNavigatorMovePreviousItem1";
             this.bindingNavigatorMovePreviousItem1.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem1.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorMovePreviousItem1.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorMovePreviousItem1.Text = "Przenieś poprzedni";
             // 
             // bindingNavigatorSeparator3
             // 
             this.bindingNavigatorSeparator3.Name = "bindingNavigatorSeparator3";
-            this.bindingNavigatorSeparator3.Size = new System.Drawing.Size(6, 31);
+            this.bindingNavigatorSeparator3.Size = new System.Drawing.Size(6, 27);
             // 
             // bindingNavigatorPositionItem1
             // 
@@ -233,7 +234,7 @@
             // bindingNavigatorSeparator4
             // 
             this.bindingNavigatorSeparator4.Name = "bindingNavigatorSeparator4";
-            this.bindingNavigatorSeparator4.Size = new System.Drawing.Size(6, 31);
+            this.bindingNavigatorSeparator4.Size = new System.Drawing.Size(6, 27);
             // 
             // bindingNavigatorMoveNextItem1
             // 
@@ -241,7 +242,7 @@
             this.bindingNavigatorMoveNextItem1.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem1.Image")));
             this.bindingNavigatorMoveNextItem1.Name = "bindingNavigatorMoveNextItem1";
             this.bindingNavigatorMoveNextItem1.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem1.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorMoveNextItem1.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorMoveNextItem1.Text = "Przenieś następny";
             // 
             // bindingNavigatorMoveLastItem1
@@ -250,13 +251,13 @@
             this.bindingNavigatorMoveLastItem1.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem1.Image")));
             this.bindingNavigatorMoveLastItem1.Name = "bindingNavigatorMoveLastItem1";
             this.bindingNavigatorMoveLastItem1.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem1.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorMoveLastItem1.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorMoveLastItem1.Text = "Przenieś ostatni";
             // 
             // bindingNavigatorSeparator5
             // 
             this.bindingNavigatorSeparator5.Name = "bindingNavigatorSeparator5";
-            this.bindingNavigatorSeparator5.Size = new System.Drawing.Size(6, 31);
+            this.bindingNavigatorSeparator5.Size = new System.Drawing.Size(6, 27);
             // 
             // toolStripBtn_save_clients
             // 
@@ -264,7 +265,7 @@
             this.toolStripBtn_save_clients.Image = global::HotelRoomsManagementSystem.Properties.Resources.save;
             this.toolStripBtn_save_clients.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripBtn_save_clients.Name = "toolStripBtn_save_clients";
-            this.toolStripBtn_save_clients.Size = new System.Drawing.Size(29, 28);
+            this.toolStripBtn_save_clients.Size = new System.Drawing.Size(29, 24);
             this.toolStripBtn_save_clients.Text = "Zapisz";
             this.toolStripBtn_save_clients.Click += new System.EventHandler(this.toolStripBtn_save_clients_Click);
             // 
@@ -272,6 +273,7 @@
             // 
             this.dataGridView_clients.AllowUserToOrderColumns = true;
             this.dataGridView_clients.AutoGenerateColumns = false;
+            this.dataGridView_clients.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView_clients.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView_clients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_clients.DataSource = this.bindingSource_clients;
@@ -417,6 +419,7 @@
             // 
             this.dataGridView_reservations.AllowUserToOrderColumns = true;
             this.dataGridView_reservations.AutoGenerateColumns = false;
+            this.dataGridView_reservations.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView_reservations.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_reservations.DataSource = this.bindingSource_reservations;
             this.dataGridView_reservations.Location = new System.Drawing.Point(0, 28);
@@ -427,17 +430,17 @@
             this.dataGridView_reservations.Size = new System.Drawing.Size(1068, 507);
             this.dataGridView_reservations.TabIndex = 0;
             // 
-            // tab_uslugi
+            // tab_roomServices
             // 
-            this.tab_uslugi.Controls.Add(this.bindingNavigator_room_services);
-            this.tab_uslugi.Controls.Add(this.dataGridView_room_services);
-            this.tab_uslugi.Location = new System.Drawing.Point(4, 25);
-            this.tab_uslugi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tab_uslugi.Name = "tab_uslugi";
-            this.tab_uslugi.Size = new System.Drawing.Size(1068, 508);
-            this.tab_uslugi.TabIndex = 2;
-            this.tab_uslugi.Text = "Uslugi";
-            this.tab_uslugi.UseVisualStyleBackColor = true;
+            this.tab_roomServices.Controls.Add(this.bindingNavigator_room_services);
+            this.tab_roomServices.Controls.Add(this.dataGridView_room_services);
+            this.tab_roomServices.Location = new System.Drawing.Point(4, 25);
+            this.tab_roomServices.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tab_roomServices.Name = "tab_roomServices";
+            this.tab_roomServices.Size = new System.Drawing.Size(1068, 508);
+            this.tab_roomServices.TabIndex = 2;
+            this.tab_roomServices.Text = "Uslugi";
+            this.tab_roomServices.UseVisualStyleBackColor = true;
             // 
             // bindingNavigator_room_services
             // 
@@ -560,6 +563,7 @@
             // 
             this.dataGridView_room_services.AllowUserToOrderColumns = true;
             this.dataGridView_room_services.AutoGenerateColumns = false;
+            this.dataGridView_room_services.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView_room_services.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_room_services.DataSource = this.bindingSource_room_services;
             this.dataGridView_room_services.Location = new System.Drawing.Point(0, 28);
@@ -702,6 +706,7 @@
             // dataGridView_rooms
             // 
             this.dataGridView_rooms.AutoGenerateColumns = false;
+            this.dataGridView_rooms.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView_rooms.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_rooms.DataSource = this.bindingSource_rooms;
             this.dataGridView_rooms.Location = new System.Drawing.Point(4, 34);
@@ -711,11 +716,23 @@
             this.dataGridView_rooms.Size = new System.Drawing.Size(1061, 466);
             this.dataGridView_rooms.TabIndex = 0;
             // 
+            // btn_goBack
+            // 
+            this.btn_goBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btn_goBack.Location = new System.Drawing.Point(889, 564);
+            this.btn_goBack.Name = "btn_goBack";
+            this.btn_goBack.Size = new System.Drawing.Size(105, 37);
+            this.btn_goBack.TabIndex = 1;
+            this.btn_goBack.Text = "Menu";
+            this.btn_goBack.UseVisualStyleBackColor = true;
+            this.btn_goBack.Click += new System.EventHandler(this.btn_goBack_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1075, 633);
+            this.Controls.Add(this.btn_goBack);
             this.Controls.Add(this.tabControl1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
@@ -735,8 +752,8 @@
             this.bindingNavigator_reservations.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource_reservations)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_reservations)).EndInit();
-            this.tab_uslugi.ResumeLayout(false);
-            this.tab_uslugi.PerformLayout();
+            this.tab_roomServices.ResumeLayout(false);
+            this.tab_roomServices.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator_room_services)).EndInit();
             this.bindingNavigator_room_services.ResumeLayout(false);
             this.bindingNavigator_room_services.PerformLayout();
@@ -754,11 +771,9 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tab_reservations;
         private System.Windows.Forms.TabPage tab_clients;
-        private System.Windows.Forms.TabPage tab_uslugi;
+        private System.Windows.Forms.TabPage tab_roomServices;
         private System.Windows.Forms.DataGridView dataGridView_reservations;
         private System.Windows.Forms.DataGridView dataGridView_clients;
         private System.Windows.Forms.DataGridView dataGridView_room_services;
@@ -817,6 +832,8 @@
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator11;
         private System.Windows.Forms.ToolStripButton toolStripBtn_save_rooms;
         private System.Windows.Forms.DataGridView dataGridView_rooms;
+        public System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.Button btn_goBack;
     }
 }
 

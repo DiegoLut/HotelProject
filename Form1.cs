@@ -8,11 +8,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace HotelRoomsManagementSystem
 {
     public partial class Form1 : Form
     {
+        private Menu menuForm;
+
         private DatabaseHelper databaseHelper;
         private BindingSource bindingSourceClients, bindingSourceReservations, bindingSourceRoomServices, bindingSourceRooms;
 
@@ -21,8 +24,10 @@ namespace HotelRoomsManagementSystem
         private Customers customers;
         private Rooms rooms;
 
-        public Form1()
+        public Form1(Menu menu)
         {
+            menuForm = menu;
+
             databaseHelper = new DatabaseHelper();
             services = new Services(databaseHelper);
             reservations = new Reservations(databaseHelper);
@@ -88,6 +93,12 @@ namespace HotelRoomsManagementSystem
 
             databaseHelper.dataSet.AcceptChanges();
             databaseHelper.ReloadData();
+        }
+
+        private void btn_goBack_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            menuForm.Show(this);
         }
 
         private void InitializeBindings()

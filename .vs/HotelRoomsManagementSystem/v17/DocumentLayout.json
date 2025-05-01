@@ -3,52 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\ADO.Net\\Project\\HotelRoomsManagementSystem\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E8EF8C95-B31B-4C48-8543-B93F94852588}|HotelRoomsManagementSystem.csproj|C:\\Users\\User\\Desktop\\ADO.Net\\Project\\HotelRoomsManagementSystem\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{E8EF8C95-B31B-4C48-8543-B93F94852588}|HotelRoomsManagementSystem.csproj|solutionrelative:menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E8EF8C95-B31B-4C48-8543-B93F94852588}|HotelRoomsManagementSystem.csproj|C:\\Users\\User\\Desktop\\ADO.Net\\Project\\HotelRoomsManagementSystem\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E8EF8C95-B31B-4C48-8543-B93F94852588}|HotelRoomsManagementSystem.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E8EF8C95-B31B-4C48-8543-B93F94852588}|HotelRoomsManagementSystem.csproj|C:\\Users\\User\\Desktop\\ADO.Net\\Project\\HotelRoomsManagementSystem\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{E8EF8C95-B31B-4C48-8543-B93F94852588}|HotelRoomsManagementSystem.csproj|solutionrelative:app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E8EF8C95-B31B-4C48-8543-B93F94852588}|HotelRoomsManagementSystem.csproj|c:\\users\\user\\desktop\\ado.net\\project\\hotelroomsmanagementsystem\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{E8EF8C95-B31B-4C48-8543-B93F94852588}|HotelRoomsManagementSystem.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E8EF8C95-B31B-4C48-8543-B93F94852588}|HotelRoomsManagementSystem.csproj|C:\\Users\\User\\Desktop\\ADO.Net\\Project\\HotelRoomsManagementSystem\\model\\pokoj.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E8EF8C95-B31B-4C48-8543-B93F94852588}|HotelRoomsManagementSystem.csproj|solutionrelative:model\\pokoj.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E8EF8C95-B31B-4C48-8543-B93F94852588}|HotelRoomsManagementSystem.csproj|C:\\Users\\User\\Desktop\\ADO.Net\\Project\\HotelRoomsManagementSystem\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E8EF8C95-B31B-4C48-8543-B93F94852588}|HotelRoomsManagementSystem.csproj|solutionrelative:menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E8EF8C95-B31B-4C48-8543-B93F94852588}|HotelRoomsManagementSystem.csproj|C:\\Users\\User\\Desktop\\ADO.Net\\Project\\HotelRoomsManagementSystem\\menu.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E8EF8C95-B31B-4C48-8543-B93F94852588}|HotelRoomsManagementSystem.csproj|solutionrelative:menu.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E8EF8C95-B31B-4C48-8543-B93F94852588}|HotelRoomsManagementSystem.csproj|C:\\Users\\User\\Desktop\\ADO.Net\\Project\\HotelRoomsManagementSystem\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E8EF8C95-B31B-4C48-8543-B93F94852588}|HotelRoomsManagementSystem.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E8EF8C95-B31B-4C48-8543-B93F94852588}|HotelRoomsManagementSystem.csproj|C:\\Users\\User\\Desktop\\ADO.Net\\Project\\HotelRoomsManagementSystem\\tabs\\rooms.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E8EF8C95-B31B-4C48-8543-B93F94852588}|HotelRoomsManagementSystem.csproj|solutionrelative:tabs\\rooms.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E8EF8C95-B31B-4C48-8543-B93F94852588}|HotelRoomsManagementSystem.csproj|C:\\Users\\User\\Desktop\\ADO.Net\\Project\\HotelRoomsManagementSystem\\tabs\\reservations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E8EF8C95-B31B-4C48-8543-B93F94852588}|HotelRoomsManagementSystem.csproj|solutionrelative:tabs\\reservations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E8EF8C95-B31B-4C48-8543-B93F94852588}|HotelRoomsManagementSystem.csproj|C:\\Users\\User\\Desktop\\ADO.Net\\Project\\HotelRoomsManagementSystem\\tabs\\customers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E8EF8C95-B31B-4C48-8543-B93F94852588}|HotelRoomsManagementSystem.csproj|solutionrelative:tabs\\customers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E8EF8C95-B31B-4C48-8543-B93F94852588}|HotelRoomsManagementSystem.csproj|C:\\Users\\User\\Desktop\\ADO.Net\\Project\\HotelRoomsManagementSystem\\database\\databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E8EF8C95-B31B-4C48-8543-B93F94852588}|HotelRoomsManagementSystem.csproj|solutionrelative:database\\databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E8EF8C95-B31B-4C48-8543-B93F94852588}|HotelRoomsManagementSystem.csproj|C:\\Users\\User\\Desktop\\ADO.Net\\Project\\HotelRoomsManagementSystem\\properties\\resources.resx||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{E8EF8C95-B31B-4C48-8543-B93F94852588}|HotelRoomsManagementSystem.csproj|solutionrelative:properties\\resources.resx||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{E8EF8C95-B31B-4C48-8543-B93F94852588}|HotelRoomsManagementSystem.csproj|c:\\users\\user\\desktop\\ado.net\\project\\hotelroomsmanagementsystem\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E8EF8C95-B31B-4C48-8543-B93F94852588}|HotelRoomsManagementSystem.csproj|solutionrelative:menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -58,17 +26,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Form1.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\ADO.Net\\Project\\HotelRoomsManagementSystem\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\ADO.Net\\Project\\HotelRoomsManagementSystem\\Form1.cs",
               "RelativeToolTip": "Form1.cs",
-              "ViewState": "AQIAAEQAAAAAAAAAAAAewF4AAAAMAAAA",
+              "ViewState": "AQIAADYAAAAAAAAAAAAYwGQAAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-16T10:16:02.827Z",
               "IsPinned": true,
@@ -96,33 +64,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Menu.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\ADO.Net\\Project\\HotelRoomsManagementSystem\\Menu.Designer.cs",
-              "RelativeDocumentMoniker": "Menu.Designer.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\ADO.Net\\Project\\HotelRoomsManagementSystem\\Menu.Designer.cs",
-              "RelativeToolTip": "Menu.Designer.cs",
-              "ViewState": "AQIAAE0AAAAAAAAAAAAYwGoAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-01T14:00:49.611Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "Menu.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\ADO.Net\\Project\\HotelRoomsManagementSystem\\Menu.cs",
               "RelativeDocumentMoniker": "Menu.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\ADO.Net\\Project\\HotelRoomsManagementSystem\\Menu.cs",
               "RelativeToolTip": "Menu.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAJAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-01T14:00:40.264Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "Menu.cs [Projekt]",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\ADO.Net\\Project\\HotelRoomsManagementSystem\\Menu.cs",
               "RelativeDocumentMoniker": "Menu.cs",
@@ -134,31 +89,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Pokoj.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\ADO.Net\\Project\\HotelRoomsManagementSystem\\Model\\Pokoj.cs",
-              "RelativeDocumentMoniker": "Model\\Pokoj.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\ADO.Net\\Project\\HotelRoomsManagementSystem\\Model\\Pokoj.cs",
-              "RelativeToolTip": "Model\\Pokoj.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-16T16:26:55.99Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Rooms.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\ADO.Net\\Project\\HotelRoomsManagementSystem\\Tabs\\Rooms.cs",
-              "RelativeDocumentMoniker": "Tabs\\Rooms.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\ADO.Net\\Project\\HotelRoomsManagementSystem\\Tabs\\Rooms.cs",
-              "RelativeToolTip": "Tabs\\Rooms.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAAD4AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-16T16:15:06.043Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "Form1.cs [Projekt]",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\ADO.Net\\Project\\HotelRoomsManagementSystem\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
@@ -167,68 +98,6 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-16T10:26:27.009Z",
               "EditorCaption": " [Projekt]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "App.config",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\ADO.Net\\Project\\HotelRoomsManagementSystem\\App.config",
-              "RelativeDocumentMoniker": "App.config",
-              "ToolTip": "C:\\Users\\User\\Desktop\\ADO.Net\\Project\\HotelRoomsManagementSystem\\App.config",
-              "RelativeToolTip": "App.config",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAABTAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2025-04-16T10:07:59.292Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Reservations.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\ADO.Net\\Project\\HotelRoomsManagementSystem\\Tabs\\Reservations.cs",
-              "RelativeDocumentMoniker": "Tabs\\Reservations.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\ADO.Net\\Project\\HotelRoomsManagementSystem\\Tabs\\Reservations.cs",
-              "RelativeToolTip": "Tabs\\Reservations.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-16T18:02:39.536Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Customers.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\ADO.Net\\Project\\HotelRoomsManagementSystem\\Tabs\\Customers.cs",
-              "RelativeDocumentMoniker": "Tabs\\Customers.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\ADO.Net\\Project\\HotelRoomsManagementSystem\\Tabs\\Customers.cs",
-              "RelativeToolTip": "Tabs\\Customers.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACcAAAAkAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-16T10:25:36.667Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Resources.resx",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\ADO.Net\\Project\\HotelRoomsManagementSystem\\Properties\\Resources.resx",
-              "RelativeDocumentMoniker": "Properties\\Resources.resx",
-              "ToolTip": "C:\\Users\\User\\Desktop\\ADO.Net\\Project\\HotelRoomsManagementSystem\\Properties\\Resources.resx",
-              "RelativeToolTip": "Properties\\Resources.resx",
-              "ViewState": "AQIAAGcAAAAAAAAAAAAswHoAAAAEAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
-              "WhenOpened": "2025-04-16T10:14:38.053Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "DatabaseHelper.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\ADO.Net\\Project\\HotelRoomsManagementSystem\\Database\\DatabaseHelper.cs",
-              "RelativeDocumentMoniker": "Database\\DatabaseHelper.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\ADO.Net\\Project\\HotelRoomsManagementSystem\\Database\\DatabaseHelper.cs",
-              "RelativeToolTip": "Database\\DatabaseHelper.cs",
-              "ViewState": "AQIAACQAAAAAAAAAAAAYwD4AAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-16T10:08:59.245Z"
             }
           ]
         }
