@@ -29,6 +29,8 @@ namespace HotelRoomsManagementSystem.Tabs
                 {
                     using (OleDbConnection conn = new OleDbConnection(databaseHelper.connectionString))
                     {
+                        conn.Open();
+
                         var insertCmd = new OleDbCommand("INSERT INTO Rezerwacja (NumerPokoju, Email, DataZameldowania, DataWymeldowania, Rabat) VALUES (?, ?, ?, ?, ?)", conn);
                         
                         insertCmd.Parameters.Add("NumerPokoju", OleDbType.VarChar, 10, "NumerPokoju");
@@ -42,18 +44,24 @@ namespace HotelRoomsManagementSystem.Tabs
 
                         CalculatePrice();
 
+                        var idCmd = new OleDbCommand("SELECT @@IDENTITY", conn);
+                        int newReservationId = Convert.ToInt32(idCmd.ExecuteScalar());
                         int cenaLaczna = Convert.ToInt32(lastRecord["CenaLaczna"]);
-
+                        var nazwaUslugi = Convert.ToString(lastRecord["NazwaUslugi"]);
                         // 4. INSERT do RezerwacjaUsluga
                         var insertCmd2 = new OleDbCommand(
                             "INSERT INTO RezerwacjaUsluga (RezerwacjaID, NazwaUslugi, CenaLaczna) VALUES (?, ?, ?)", conn);
 
-                        //insertCmd2.Parameters.AddWithValue("RezerwacjaID", "RezerwacjaID");
-                        //insertCmd2.Parameters.Add("NazwaUslugi", "NazwaUslugi");
-                        //insertCmd2.Parameters.AddWithValue("CenaLaczna", cenaLaczna);
+                        insertCmd2.Parameters.AddWithValue("RezerwacjaID", newReservationId);
+                        insertCmd2.Parameters.AddWithValue("NazwaUslugi", nazwaUslugi);
+                        insertCmd2.Parameters.AddWithValue("CenaLaczna", cenaLaczna);
 
-                        //insertCmd2.ExecuteNonQuery();
+                        //databaseHelper.adapterReservationsWithServices.InsertCommand = insertCmd2;
+                        //databaseHelper.adapterReservationsWithServices.Update(dsAdded, "RezerwacjaUsluga");
+                        insertCmd2.ExecuteNonQuery();
 
+
+                        conn.Close();
 
                     }
                     MessageBox.Show("Nowe rezerwacje zostały zapisane.", "Sukces", MessageBoxButtons.OK, MessageBoxIcon.Information);

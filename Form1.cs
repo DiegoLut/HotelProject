@@ -17,7 +17,7 @@ namespace HotelRoomsManagementSystem
         private Menu menuForm;
 
         private DatabaseHelper databaseHelper;
-        private BindingSource bindingSourceClients, bindingSourceReservations, bindingSourceRoomServices, bindingSourceRooms;
+        private BindingSource bindingSourceClients, bindingSourceReservations, bindingSourceRoomServices, bindingSourceRooms, bindingSourceReservtionsServices;
 
         private Services services;
         private Reservations reservations;
@@ -54,6 +54,7 @@ namespace HotelRoomsManagementSystem
             bindingSourceClients = new BindingSource { DataSource = databaseHelper.dataSet, DataMember = "Klient" };
             bindingSourceReservations = new BindingSource { DataSource = databaseHelper.dataSet, DataMember = "Rezerwacja" };
             bindingSourceRoomServices = new BindingSource { DataSource = databaseHelper.dataSet, DataMember = "Usluga" };
+            bindingSourceReservtionsServices = new BindingSource { DataSource = databaseHelper.dataSet, DataMember = "RezerwacjaUsluga" };
             bindingSourceRooms = new BindingSource { DataSource = databaseHelper.dataSet, DataMember = "Pokoj" };
 
             dataGridView_clients.DataSource = bindingSourceClients;
