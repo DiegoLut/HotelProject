@@ -29,12 +29,12 @@ namespace HotelRoomsManagementSystem
         {
             try
             {
-                adapterClients = new OleDbDataAdapter("SELECT Imie, Nazwisko, Email, Telefon FROM Klient", connectionString);
-                adapterReservations = new OleDbDataAdapter("SELECT r.NumerPokoju, r.Email, r.DataZameldowania, r.DataWymeldowania, r.Rabat, ru.NazwaUslugi, " +
+                adapterClients = new OleDbDataAdapter("SELECT * FROM Klient", connectionString);
+                adapterReservations = new OleDbDataAdapter("SELECT r.RezerwacjaID, r.NumerPokoju, r.Email, r.DataZameldowania, r.DataWymeldowania, r.Rabat, ru.RezerwacjaUslugaID, ru.NazwaUslugi, " +
                     "ru.CenaLaczna FROM Rezerwacja AS r JOIN RezerwacjaUsluga AS ru ON r.RezerwacjaID = ru.RezerwacjaID", connectionString);
-                adapterReservationsWithServices = new OleDbDataAdapter("SELECT RezerwacjaID, NazwaUslugi, CenaLaczna FROM RezerwacjaUsluga", connectionString);
-                adapterRoomServices = new OleDbDataAdapter("SELECT Nazwa, opis, cena FROM Usluga", connectionString);
-                adapterRooms = new OleDbDataAdapter("SELECT NumerPokoju, TypPokoju, CenaZaNoc, Dostepnosc FROM Pokoj", connectionString);
+                adapterReservationsWithServices = new OleDbDataAdapter("SELECT * FROM RezerwacjaUsluga", connectionString);
+                adapterRoomServices = new OleDbDataAdapter("SELECT * FROM Usluga", connectionString);
+                adapterRooms = new OleDbDataAdapter("SELECT * FROM Pokoj", connectionString);
 
 
                 dataSet = new DataSet();

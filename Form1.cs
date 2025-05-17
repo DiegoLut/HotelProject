@@ -39,9 +39,15 @@ namespace HotelRoomsManagementSystem
             dataGridView_reservations.AutoGenerateColumns = true;
             dataGridView_rooms.AutoGenerateColumns = true;
             InitializeBindings();
+            dataGridView_reservations.Columns["RezerwacjaID"].Visible = false;
+            dataGridView_reservations.Columns["RezerwacjaUslugaID"].Visible = false;
+            dataGridView_clients.Columns["KlientID"].Visible = false;
+            dataGridView_rooms.Columns["PokojID"].Visible = false;
+            dataGridView_room_services.Columns["UslugaID"].Visible = false;
+
         }
 
-       
+
 
         private void btn_goBack_Click(object sender, EventArgs e)
         {

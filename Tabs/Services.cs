@@ -26,6 +26,16 @@ namespace HotelRoomsManagementSystem.Tabs
                 DataSet dsAdded = databaseHelper.dataSet.GetChanges(DataRowState.Added);
                 if (dsAdded != null)
                 {
+                    DataTable uslugiTable = dsAdded.Tables["Usluga"];
+                    foreach (DataRow row in uslugiTable.Rows)
+                    {
+                        if (!ValidateServiceRow(row, isNew: true, out string error))
+                        {
+                            MessageBox.Show(error, "Błąd walidacji", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+                        }
+                    }
+
                     using (OleDbConnection conn = new OleDbConnection(databaseHelper.connectionString))
                     {
                         var insertCmd = new OleDbCommand("INSERT INTO Usluga (Nazwa, Opis, Cena) VALUES (?, ?, ?)", conn);
@@ -52,6 +62,15 @@ namespace HotelRoomsManagementSystem.Tabs
                 DataSet dsModified = databaseHelper.dataSet.GetChanges(DataRowState.Modified);
                 if (dsModified != null)
                 {
+                    DataTable uslugiTable = dsModified.Tables["Usluga"];
+                    foreach (DataRow row in uslugiTable.Rows)
+                    {
+                        if (!ValidateServiceRow(row, isNew: false, out string error))
+                        {
+                            MessageBox.Show(error, "Błąd walidacji", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+                        }
+                    }
                     using (OleDbConnection conn = new OleDbConnection(databaseHelper.connectionString))
                     {
                         var updateCmd = new OleDbCommand("UPDATE Uslugi SET Nazwa = ?, Opis = ?, Cena = ? WHERE UslugaID = ?", conn);
@@ -71,6 +90,51 @@ namespace HotelRoomsManagementSystem.Tabs
                 MessageBox.Show("Błąd zapisu zmian uslugi: " + ex.Message, "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private bool ValidateServiceRow(DataRow row, bool isNew, out string errorMessage)
+        {
+            errorMessage = "";
+            var ds = databaseHelper.dataSet;
+
+            string nazwa = row["Nazwa"]?.ToString()?.Trim();
+            string opis = row["Opis"]?.ToString()?.Trim();
+            object cenaObj = row["Cena"];
+
+            if (string.IsNullOrWhiteSpace(nazwa))
+            {
+                errorMessage = "Nazwa usługi nie może być pusta.";
+                return false;
+            }
+
+            if (string.IsNullOrWhiteSpace(opis))
+            {
+                errorMessage = "Opis usługi nie może być pusty.";
+                return false;
+            }
+
+            if (cenaObj == DBNull.Value || !decimal.TryParse(cenaObj.ToString(), out decimal cena) || cena < 0)
+            {
+                errorMessage = "Cena musi być liczbą dodatnią.";
+                return false;
+            }
+
+ 
+            if (isNew)
+            {
+                bool exists = ds.Tables["Usluga"]
+                    .AsEnumerable()
+                    .Any(r => r.RowState != DataRowState.Deleted && r["Nazwa"].ToString().Equals(nazwa, StringComparison.OrdinalIgnoreCase));
+
+                if (exists)
+                {
+                    errorMessage = $"Usługa o nazwie '{nazwa}' już istnieje.";
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
     }
-        
+
 }
