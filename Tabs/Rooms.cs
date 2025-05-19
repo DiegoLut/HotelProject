@@ -24,7 +24,11 @@ namespace HotelRoomsManagementSystem.Tabs
                 {
                     foreach (DataRow row in dsAdded.Tables["Pokoj"].Rows)
                     {
-                        if (!ValidateServiceRow(row, true, out string errorMessage))
+                        if (row.IsNull("Dostepnosc"))
+                        {
+                            row["Dostepnosc"] = false;
+                        }
+                        if (!ValidateRoomRow(row, out string errorMessage))
                         {
                             MessageBox.Show(errorMessage, "Błąd walidacji", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             return;
@@ -60,7 +64,11 @@ namespace HotelRoomsManagementSystem.Tabs
                 {
                     foreach (DataRow row in dsModified.Tables["Pokoj"].Rows)
                     {
-                        if (!ValidateServiceRow(row, false, out string errorMessage))
+                        if (row.IsNull("Dostepnosc"))
+                        {
+                            row["Dostepnosc"] = false;
+                        }
+                        if (!ValidateRoomRow(row, out string errorMessage))
                         {
                             MessageBox.Show(errorMessage, "Błąd walidacji", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             return;
@@ -87,17 +95,17 @@ namespace HotelRoomsManagementSystem.Tabs
             }
         }
 
-        private bool ValidateServiceRow(DataRow row, bool isNew, out string errorMessage)
+        private bool ValidateRoomRow(DataRow row, out string errorMessage)
         {
             errorMessage = "";
 
-            string nazwa = row["Nazwa"]?.ToString()?.Trim();
+            string numerPokoju = row["NumerPokoju"]?.ToString()?.Trim();
             string typPokoju = row["TypPokoju"]?.ToString()?.Trim().ToLower();
-            object cenaObj = row["Cena"];
+            object cenaObj = row["CenaZaNoc"];
 
-            if (string.IsNullOrWhiteSpace(nazwa))
+            if (string.IsNullOrWhiteSpace(numerPokoju))
             {
-                errorMessage = "Nazwa usługi nie może być pusta.";
+                errorMessage = "Numer pokoju nie może być pusty.";
                 return false;
             }
 
@@ -108,27 +116,14 @@ namespace HotelRoomsManagementSystem.Tabs
                 return false;
             }
 
-
             if (cenaObj == DBNull.Value || !decimal.TryParse(cenaObj.ToString(), out decimal cena) || cena < 0)
             {
-                errorMessage = "Cena musi być liczbą dodatnią.";
+                errorMessage = "Cena za noc musi być liczbą dodatnią.";
                 return false;
-            }
-
-            if (isNew)
-            {
-                foreach (DataRow existingRow in databaseHelper.dataSet.Tables["Usluga"].Rows)
-                {
-                    if (existingRow.RowState != DataRowState.Deleted &&
-                        existingRow["Nazwa"].ToString().Trim().Equals(nazwa, StringComparison.OrdinalIgnoreCase))
-                    {
-                        errorMessage = $"Usługa o nazwie '{nazwa}' już istnieje.";
-                        return false;
-                    }
-                }
             }
 
             return true;
         }
+
     }
 }

@@ -3,16 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\ADO.Net\\Project\\HotelRoomsManagementSystem\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{E8EF8C95-B31B-4C48-8543-B93F94852588}|HotelRoomsManagementSystem.csproj|C:\\Users\\User\\Desktop\\ADO.Net\\Project\\HotelRoomsManagementSystem\\tabs\\rooms.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8EF8C95-B31B-4C48-8543-B93F94852588}|HotelRoomsManagementSystem.csproj|solutionrelative:tabs\\rooms.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8EF8C95-B31B-4C48-8543-B93F94852588}|HotelRoomsManagementSystem.csproj|C:\\Users\\User\\Desktop\\ADO.Net\\Project\\HotelRoomsManagementSystem\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8EF8C95-B31B-4C48-8543-B93F94852588}|HotelRoomsManagementSystem.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8EF8C95-B31B-4C48-8543-B93F94852588}|HotelRoomsManagementSystem.csproj|c:\\users\\user\\desktop\\ado.net\\project\\hotelroomsmanagementsystem\\model\\pokoj.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8EF8C95-B31B-4C48-8543-B93F94852588}|HotelRoomsManagementSystem.csproj|solutionrelative:model\\pokoj.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8EF8C95-B31B-4C48-8543-B93F94852588}|HotelRoomsManagementSystem.csproj|C:\\Users\\User\\Desktop\\ADO.Net\\Project\\HotelRoomsManagementSystem\\tabs\\reservations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8EF8C95-B31B-4C48-8543-B93F94852588}|HotelRoomsManagementSystem.csproj|solutionrelative:tabs\\reservations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E8EF8C95-B31B-4C48-8543-B93F94852588}|HotelRoomsManagementSystem.csproj|c:\\users\\user\\desktop\\ado.net\\project\\hotelroomsmanagementsystem\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E8EF8C95-B31B-4C48-8543-B93F94852588}|HotelRoomsManagementSystem.csproj|solutionrelative:form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E8EF8C95-B31B-4C48-8543-B93F94852588}|HotelRoomsManagementSystem.csproj|c:\\users\\user\\desktop\\ado.net\\project\\hotelroomsmanagementsystem\\form1.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}",
+      "AbsoluteMoniker": "D:0:0:{E8EF8C95-B31B-4C48-8543-B93F94852588}|HotelRoomsManagementSystem.csproj|C:\\Users\\User\\Desktop\\ADO.Net\\Project\\HotelRoomsManagementSystem\\form1.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}",
       "RelativeMoniker": "D:0:0:{E8EF8C95-B31B-4C48-8543-B93F94852588}|HotelRoomsManagementSystem.csproj|solutionrelative:form1.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E8EF8C95-B31B-4C48-8543-B93F94852588}|HotelRoomsManagementSystem.csproj|c:\\users\\user\\desktop\\ado.net\\project\\hotelroomsmanagementsystem\\tabs\\rooms.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E8EF8C95-B31B-4C48-8543-B93F94852588}|HotelRoomsManagementSystem.csproj|solutionrelative:tabs\\rooms.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E8EF8C95-B31B-4C48-8543-B93F94852588}|HotelRoomsManagementSystem.csproj|C:\\Users\\User\\Desktop\\ADO.Net\\Project\\HotelRoomsManagementSystem\\tabs\\customers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -21,14 +33,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{E8EF8C95-B31B-4C48-8543-B93F94852588}|HotelRoomsManagementSystem.csproj|C:\\Users\\User\\Desktop\\ADO.Net\\Project\\HotelRoomsManagementSystem\\model\\klient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E8EF8C95-B31B-4C48-8543-B93F94852588}|HotelRoomsManagementSystem.csproj|solutionrelative:model\\klient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E8EF8C95-B31B-4C48-8543-B93F94852588}|HotelRoomsManagementSystem.csproj|C:\\Users\\User\\Desktop\\ADO.Net\\Project\\HotelRoomsManagementSystem\\tabs\\reservations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E8EF8C95-B31B-4C48-8543-B93F94852588}|HotelRoomsManagementSystem.csproj|solutionrelative:tabs\\reservations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E8EF8C95-B31B-4C48-8543-B93F94852588}|HotelRoomsManagementSystem.csproj|C:\\Users\\User\\Desktop\\ADO.Net\\Project\\HotelRoomsManagementSystem\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E8EF8C95-B31B-4C48-8543-B93F94852588}|HotelRoomsManagementSystem.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E8EF8C95-B31B-4C48-8543-B93F94852588}|HotelRoomsManagementSystem.csproj|C:\\Users\\User\\Desktop\\ADO.Net\\Project\\HotelRoomsManagementSystem\\tabs\\services.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -74,20 +78,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 11,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 1,
               "Title": "Form1.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\ADO.Net\\Project\\HotelRoomsManagementSystem\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\ADO.Net\\Project\\HotelRoomsManagementSystem\\Form1.cs",
               "RelativeToolTip": "Form1.cs",
-              "ViewState": "AQIAABQAAAAAAAAAAAAAwFcAAAAwAAAA",
+              "ViewState": "AQIAABQAAAAAAAAAAAAAwC0AAABLAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-16T10:16:02.827Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Bookmark",
@@ -111,20 +116,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
+              "Title": "Pokoj.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\ADO.Net\\Project\\HotelRoomsManagementSystem\\Model\\Pokoj.cs",
+              "RelativeDocumentMoniker": "Model\\Pokoj.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\ADO.Net\\Project\\HotelRoomsManagementSystem\\Model\\Pokoj.cs",
+              "RelativeToolTip": "Model\\Pokoj.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-19T11:43:54.9Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Form1.Designer.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\ADO.Net\\Project\\HotelRoomsManagementSystem\\Form1.Designer.cs",
               "RelativeDocumentMoniker": "Form1.Designer.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\ADO.Net\\Project\\HotelRoomsManagementSystem\\Form1.Designer.cs",
               "RelativeToolTip": "Form1.Designer.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-17T09:31:46.566Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "Form1.resx",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\ADO.Net\\Project\\HotelRoomsManagementSystem\\Form1.resx",
               "RelativeDocumentMoniker": "Form1.resx",
@@ -136,7 +154,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "Klient.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\ADO.Net\\Project\\HotelRoomsManagementSystem\\Model\\Klient.cs",
               "RelativeDocumentMoniker": "Model\\Klient.cs",
@@ -148,7 +166,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "Services.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\ADO.Net\\Project\\HotelRoomsManagementSystem\\Tabs\\Services.cs",
               "RelativeDocumentMoniker": "Tabs\\Services.cs",
@@ -160,20 +178,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Rooms.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\ADO.Net\\Project\\HotelRoomsManagementSystem\\Tabs\\Rooms.cs",
               "RelativeDocumentMoniker": "Tabs\\Rooms.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\ADO.Net\\Project\\HotelRoomsManagementSystem\\Tabs\\Rooms.cs",
               "RelativeToolTip": "Tabs\\Rooms.cs",
-              "ViewState": "AQIAABEAAAAAAAAAAAA+wBUAAABYAAAA",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAQwDoAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-16T08:36:53.311Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "Customers.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\ADO.Net\\Project\\HotelRoomsManagementSystem\\Tabs\\Customers.cs",
               "RelativeDocumentMoniker": "Tabs\\Customers.cs",
@@ -185,7 +203,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "DatabaseHelper.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\ADO.Net\\Project\\HotelRoomsManagementSystem\\Database\\DatabaseHelper.cs",
               "RelativeDocumentMoniker": "Database\\DatabaseHelper.cs",
@@ -197,7 +215,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "App.config",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\ADO.Net\\Project\\HotelRoomsManagementSystem\\App.config",
               "RelativeDocumentMoniker": "App.config",
@@ -205,23 +223,25 @@
               "RelativeToolTip": "App.config",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAABOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2025-05-09T08:09:36.477Z"
+              "WhenOpened": "2025-05-09T08:09:36.477Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
               "Title": "Reservations.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\ADO.Net\\Project\\HotelRoomsManagementSystem\\Tabs\\Reservations.cs",
               "RelativeDocumentMoniker": "Tabs\\Reservations.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\ADO.Net\\Project\\HotelRoomsManagementSystem\\Tabs\\Reservations.cs",
               "RelativeToolTip": "Tabs\\Reservations.cs",
-              "ViewState": "AQIAAJMAAAAAAAAAAAAowJcAAAAIAAAA",
+              "ViewState": "AQIAAO4AAAAAAAAAAAAqwPkAAAA1AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T08:07:22.28Z"
+              "WhenOpened": "2025-05-09T08:07:22.28Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "Usluga.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\ADO.Net\\Project\\HotelRoomsManagementSystem\\Model\\Usluga.cs",
               "RelativeDocumentMoniker": "Model\\Usluga.cs",
@@ -233,7 +253,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "RezerwacjaUsluga.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\ADO.Net\\Project\\HotelRoomsManagementSystem\\Model\\RezerwacjaUsluga.cs",
               "RelativeDocumentMoniker": "Model\\RezerwacjaUsluga.cs",
@@ -245,7 +265,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "Rezerwacja.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\ADO.Net\\Project\\HotelRoomsManagementSystem\\Model\\Rezerwacja.cs",
               "RelativeDocumentMoniker": "Model\\Rezerwacja.cs",
@@ -257,7 +277,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "Menu.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\ADO.Net\\Project\\HotelRoomsManagementSystem\\Menu.cs",
               "RelativeDocumentMoniker": "Menu.cs",
@@ -269,7 +289,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "Menu.cs [Projekt]",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\ADO.Net\\Project\\HotelRoomsManagementSystem\\Menu.cs",
               "RelativeDocumentMoniker": "Menu.cs",
@@ -280,14 +300,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "Form1.cs [Projekt]",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\ADO.Net\\Project\\HotelRoomsManagementSystem\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\ADO.Net\\Project\\HotelRoomsManagementSystem\\Form1.cs [Projekt]",
               "RelativeToolTip": "Form1.cs [Projekt]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-16T10:26:27.009Z"
+              "WhenOpened": "2025-04-16T10:26:27.009Z",
+              "EditorCaption": " [Projekt]"
             }
           ]
         }
